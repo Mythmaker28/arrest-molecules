@@ -38,5 +38,9 @@ figures/*.tiff
 *_private.csv
 *_confidential.*
 
+# Notes personnelles (local only)
+_notes_personnelles/
+*_PERSONNEL.*
+
 # Excel temporaires
 ~$*.xlsx
