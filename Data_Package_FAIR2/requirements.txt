@@ -1,0 +1,31 @@
+# Molecular Arrest Framework - Python Dependencies
+# Version: 1.0.1
+# Date: October 2025
+# Compatible with Python 3.8+
+
+# Core scientific computing
+numpy==1.24.3
+pandas==2.0.3
+scipy==1.11.1
+
+# Visualization
+matplotlib==3.7.2
+
+# Statistical analysis
+statsmodels==0.14.0
+
+# Optional: For advanced features
+seaborn==0.12.2  # Enhanced plotting
+openpyxl==3.1.2  # Excel file support
+
+# Development (optional)
+pytest==7.4.0  # Unit testing
+black==23.7.0  # Code formatting
+flake8==6.0.0  # Linting
+
+# Installation command:
+# pip install -r requirements.txt
+#
+# For minimal installation (core only):
+# pip install numpy==1.24.3 pandas==2.0.3 matplotlib==3.7.2 scipy==1.11.1
+
