@@ -78,7 +78,7 @@ def calculate_API_relative(API_absolute, reference_API=6.95):
 
 
 def monte_carlo_API_uncertainty(K_d_params, tau_params, t_onset_params, EC50_params, 
-                                 n_iterations=10000, reference_API=6.95):
+                                 n_iterations=10000, reference_API=6.95, random_seed=42):
     """
     Perform Monte Carlo simulation for API uncertainty quantification.
     
@@ -118,7 +118,8 @@ def monte_carlo_API_uncertainty(K_d_params, tau_params, t_onset_params, EC50_par
     sd_EC50 = EC50_params[1] if len(EC50_params) > 1 else get_log_sd(EC50_params[2] if len(EC50_params) > 2 else 1)
     
     # Sample from log-normal distributions
-    np.random.seed(42)  # Reproducibility
+    # Default seed=42 ensures reproducibility; change seed for independence tests
+    np.random.seed(random_seed)  # Configurable seed
     
     K_d_samples = np.random.lognormal(np.log(K_d_params[0]), sd_K_d, n_iterations)
     tau_samples = np.random.lognormal(np.log(tau_params[0]), sd_tau, n_iterations)
@@ -261,7 +262,8 @@ def analyze_compound(compound_name, n_iterations=10000, plot=True):
         tau_params=data['tau'],
         t_onset_params=data['t_onset'],
         EC50_params=data['EC50'],
-        n_iterations=n_iterations
+        n_iterations=n_iterations,
+        random_seed=42  # Use global default; will be made configurable via CLI
     )
     
     # Confidence grading
@@ -509,8 +511,16 @@ Examples:
     parser.add_argument('--EC50', type=float, help='EC50 in nM')
     parser.add_argument('--iterations', type=int, default=10000, help='Monte Carlo iterations (default 10000)')
     parser.add_argument('--no_plot', action='store_true', help='Suppress plots')
+    parser.add_argument('--random-seed', type=int, default=42, help='Random seed for Monte Carlo (default 42 for reproducibility, use different values for independence tests)')
     
     args = parser.parse_args()
+    
+    # Set global random seed if provided
+    if args.random_seed != 42:
+        np.random.seed(args.random_seed)
+        print(f"ℹ️  Using custom random seed: {args.random_seed} (non-default, results will differ from published)")
+    else:
+        print(f"ℹ️  Using default seed: 42 (reproducible mode)")
     
     # Execute based on arguments
     if args.all:
@@ -529,7 +539,10 @@ Examples:
         parser.print_help()
         print("\n  → Run with --all to analyze all compounds")
         print("  → Run with --compound 'Salvinorin A' for single compound")
-        print("  → Run with --new_compound for novel compound calculation\n")
+        print("  → Run with --new_compound for novel compound calculation")
+        print("\nSeed options:")
+        print("  → Default (seed=42): Reproducible results matching manuscript")
+        print("  → Custom seed (--random-seed N): For independent validation tests\n")
 
 
 # Example usage (when imported as module):

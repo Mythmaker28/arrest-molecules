@@ -3,7 +3,7 @@
 **Version:** 1.0  
 **Date:** October 2025  
 **Author:** Tommy Lepesteur (tommy.lepesteur@hotmail.fr)  
-**ORCID:** 0009-0009-0577-9563  
+**ORCID:** À confirmer par l'auteur avant soumission (voir section "Action requise" ci-dessous)  
 **License:** CC-BY 4.0 (data), MIT License (code)  
 **DOI:** [To be assigned by Zenodo upon publication]  
 
@@ -199,6 +199,19 @@ The package contains:
 - **v2.0:** Incorporate Experiment 1 results (salvinorin fMRI data) when available
 - **v2.1:** Incorporate Experiment 2 results (oscillatory cellular lifespan)
 - **v3.0:** Clinical validation from Experiment 3 (TRD trial)
+
+---
+
+## ⚠️ Action Requise Avant Soumission
+
+**ORCID À CONFIRMER :** La valeur actuelle `0009-0009-0577-9563` présente un format inhabituel (double préfixe "0009") et nécessite validation par l'auteur. 
+
+**Options :**
+1. Si cet ORCID est valide et vous appartient : Garder tel quel
+2. Si invalide : S'enregistrer sur https://orcid.org/register et remplacer partout (v6.txt, README.md, fichiers Data_Package)
+3. Ne PAS utiliser de valeur fictive
+
+**Frontiers vérifie automatiquement les ORCID lors de la soumission.**
 
 ---
 

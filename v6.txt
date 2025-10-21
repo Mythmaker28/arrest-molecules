@@ -1257,7 +1257,7 @@ The author declares no competing financial interests. No funding was received fo
 
 As sole author, T.M. conceived the framework, conducted literature review and data extraction (with independent quality verification), performed all metric calculations and Monte Carlo simulations, developed experimental protocols, wrote the manuscript, and created supplementary materials.
 
-**ORCID:** 0009-0009-0577-9563
+**ORCID:** À confirmer par l'auteur à la soumission (format actuel: 0009-0009-0577-9563 nécessite validation)
 
 ## Funding Statement
 

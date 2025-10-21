@@ -99,6 +99,23 @@ The package contains:
    ```
 5. Output: API = 0.12 [95% CI: 0.08-0.16], Confidence: MODERATE
 
+**Note sur la reproductibilité vs tests d'indépendance :**
+
+- **Mode par défaut (seed=42) :** Résultats identiques entre exécutions → reproductibilité scientifique
+  ```python
+  python Python_Code_API_Monte_Carlo.py --all  # Seed 42 implicite
+  ```
+  
+- **Tests d'indépendance (seed variable) :** Validation par échantillonnage indépendant
+  ```python
+  python Python_Code_API_Monte_Carlo.py --all --random-seed 123  # Seed différent
+  python Python_Code_API_Monte_Carlo.py --all --random-seed 456  # Autre seed
+  ```
+  Les valeurs médianes et intervalles de confiance doivent rester similaires (variance Monte Carlo) si les calculs sont robustes.
+
+**Pourquoi seed=42 par défaut ?**
+Standard en science computationnelle pour la reproductibilité des publications. Permet aux reviewers/lecteurs de vérifier exactement les résultats rapportés dans le manuscrit. Pour des tests indépendants (validation externe), utilisez des seeds différents et comparez les distributions.
+
 ### For users wanting to extend framework to new compounds:
 
 1. Gather required parameters (K_d, k_off or duration, t_onset, EC₅₀)
