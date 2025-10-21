@@ -2,7 +2,7 @@
 """
 Arrest Potency Index (API) Calculator with Monte Carlo Uncertainty Quantification
 
-Author: Tommy Mythmaker
+Author: Tommy Lepesteur
 License: MIT
 Version: 1.0
 Date: October 2025

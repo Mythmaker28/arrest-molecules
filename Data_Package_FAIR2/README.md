@@ -176,13 +176,13 @@ The package contains:
 ### Recommended Citations
 
 **For the dataset:**
-> Mythmaker T. Molecular Arrest Framework Research Data Package (Version 1.0) [Data set]. Zenodo. https://doi.org/[DOI-to-be-assigned] (2025)
+> Lepesteur T. Molecular Arrest Framework Research Data Package (Version 1.0) [Data set]. Zenodo. https://doi.org/[DOI-to-be-assigned] (2025)
 
 **For the manuscript:**
-> Mythmaker T. Molecular Arrest in Biological Regulation: A Unifying Framework for Natural Compounds with Dampening Effects. *Front Pharmacol* [in review] (2025)
+> Lepesteur T. Molecular Arrest in Biological Regulation: A Unifying Framework for Natural Compounds with Dampening Effects. *Front Pharmacol* [in review] (2025)
 
 **For the code:**
-> Mythmaker T. molecular-arrest-framework: API calculation tools (v1.0). GitHub. https://github.com/molecular-arrest-framework (2025)
+> Lepesteur T. molecular-arrest-framework: API calculation tools (v1.0). GitHub. https://github.com/Mythmaker28/arrest-molecules (2025)
 
 ---
 
