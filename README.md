@@ -1,11 +1,16 @@
-# Molecular Arrest Framework - Research Data Package
+# Molecular Arrest in Biological Regulation
 
-**Version:** 1.0  
+**Framework théorique pour l'étude des composés induisant des pauses biologiques productives**
+
+---
+
+**Version:** 1.0.1  
 **Date:** October 2025  
 **Author:** Tommy Lepesteur (tommy.lepesteur@hotmail.fr)  
-**ORCID:** À confirmer par l'auteur avant soumission (voir section "Action requise" ci-dessous)  
+**ORCID:** À confirmer  
 **License:** CC-BY 4.0 (data), MIT License (code)  
 **DOI:** [To be assigned by Zenodo upon publication]  
+**Repository:** https://github.com/Mythmaker28/arrest-molecules  
 
 ---
 
@@ -202,18 +207,6 @@ The package contains:
 
 ---
 
-## ⚠️ Action Requise Avant Soumission
-
-**ORCID À CONFIRMER :** La valeur actuelle `0009-0009-0577-9563` présente un format inhabituel (double préfixe "0009") et nécessite validation par l'auteur. 
-
-**Options :**
-1. Si cet ORCID est valide et vous appartient : Garder tel quel
-2. Si invalide : S'enregistrer sur https://orcid.org/register et remplacer partout (v6.txt, README.md, fichiers Data_Package)
-3. Ne PAS utiliser de valeur fictive
-
-**Frontiers vérifie automatiquement les ORCID lors de la soumission.**
-
----
 
 ## Contact and Support
 
