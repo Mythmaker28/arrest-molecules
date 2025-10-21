@@ -2,8 +2,8 @@
 
 **Version:** 1.0  
 **Date:** October 2025  
-**Author:** Tommy Lepesteur   
-**ORCID:** 0009-0009-0577-9563  
+**Author:** Tommy Lepesteur (tommy.lepesteur@hotmail.fr)  
+**ORCID:** À confirmer par l'auteur avant soumission (voir section "Action requise" ci-dessous)  
 **License:** CC-BY 4.0 (data), MIT License (code)  
 **DOI:** [To be assigned by Zenodo upon publication]  
 
@@ -176,13 +176,13 @@ The package contains:
 ### Recommended Citations
 
 **For the dataset:**
-> Mythmaker T. Molecular Arrest Framework Research Data Package (Version 1.0) [Data set]. Zenodo. https://doi.org/[DOI-to-be-assigned] (2025)
+> Lepesteur T. Molecular Arrest Framework Research Data Package (Version 1.0) [Data set]. Zenodo. https://doi.org/[DOI-to-be-assigned] (2025)
 
 **For the manuscript:**
-> Mythmaker T. Molecular Arrest in Biological Regulation: A Unifying Framework for Natural Compounds with Dampening Effects. *Front Pharmacol* [in review] (2025)
+> Lepesteur T. Molecular Arrest in Biological Regulation: A Unifying Framework for Natural Compounds with Dampening Effects. *Front Pharmacol* [in review] (2025)
 
 **For the code:**
-> Mythmaker T. molecular-arrest-framework: API calculation tools (v1.0). GitHub. https://github.com/molecular-arrest-framework (2025)
+> Lepesteur T. molecular-arrest-framework: API calculation tools (v1.0). GitHub. https://github.com/Mythmaker28/arrest-molecules (2025)
 
 ---
 
@@ -199,6 +199,19 @@ The package contains:
 - **v2.0:** Incorporate Experiment 1 results (salvinorin fMRI data) when available
 - **v2.1:** Incorporate Experiment 2 results (oscillatory cellular lifespan)
 - **v3.0:** Clinical validation from Experiment 3 (TRD trial)
+
+---
+
+## ⚠️ Action Requise Avant Soumission
+
+**ORCID À CONFIRMER :** La valeur actuelle `0009-0009-0577-9563` présente un format inhabituel (double préfixe "0009") et nécessite validation par l'auteur. 
+
+**Options :**
+1. Si cet ORCID est valide et vous appartient : Garder tel quel
+2. Si invalide : S'enregistrer sur https://orcid.org/register et remplacer partout (v6.txt, README.md, fichiers Data_Package)
+3. Ne PAS utiliser de valeur fictive
+
+**Frontiers vérifie automatiquement les ORCID lors de la soumission.**
 
 ---
 
@@ -241,7 +254,45 @@ Data compilation supported by independent literature review with quality verific
 
 ---
 
-## Changelog
+## Changelog & Release Notes
+
+### v1.0.1 (2025-10-21) - Corrections Post-Rapport (branche: corrections-rapport-78)
+
+**Harmonisation prédictions (42→44) :**
+- Nombre de prédictions corrigé dans v6.txt (Abstract, Conclusions, Tables) pour correspondre au CSV
+- Statistiques de confiance recalculées : High 18/44 (41%), Moderate 13/44 (30%), Low 13/44 (30%)
+- Note de synchronisation ajoutée en Section 2 (Méthodes) : CSV = source authoritative
+
+**Fichiers manquants créés (5) :**
+- `Experimental_Protocols_Summary.csv` : 9 entités (3 exp proposés + 6 artefacts de données)
+- `R_Code_Figures_S2.R` : Script R complet générant Figure S2 (3 panneaux oscillatoires) [+ version Python alternative]
+- `Data_Dictionary.md` : Dictionnaire complet 9 sections (convertible PDF à soumission)
+- `Literature_Search_Strategy.md` : PRISMA complet, 1247→85 sources, critères inclusion/exclusion détaillés
+- `generate_excel_workbook.py` + `API_Calculations_Full.xlsx` : 5 sheets Excel (formulas/params/examples/MC/provenance)
+
+**Figures brouillons créés (3) :**
+- `figures/Figure_S1_Molecular_Structures_draft.png` : 6 composés avec highlights pharmacophores (placeholder ChemDraw haute-déf après acceptation)
+- `figures/Figure_S2_Oscillatory_Advantage_draft.png/tiff` : 3 panneaux (moléculaire/cellulaire/clinique) 300 dpi
+- `figures/Figure_S3_API_Flowchart_draft.png` : Workflow calcul API avec boxes+flèches (Visio professionnel après acceptation)
+
+**Améliorations code :**
+- Option `--random-seed` ajoutée au script Python (défaut 42 reproductible, modifiable pour tests indépendance)
+- Documentation complète mode reproductible vs validation indépendante
+
+**ORCID :**
+- Format actuel `0009-0009-0577-9563` marqué "à confirmer" (pattern inhabituel)
+- Section ⚠️ Action Requise ajoutée au README avec instructions validation
+
+**Politique figures :**
+- Brouillons 300 dpi fournis pour review
+- Versions haute-fidélité (ChemDraw/R/Visio) seront produites après acceptation manuscrit
+- Note explicite dans chaque figure
+
+**Commits atomiques :** 6 commits avec messages clairs et descriptifs
+
+---
+
+### v1.0 (2025-10-21) - Initial Release
 
 **2025-10-21:** Dataset created, v1.0 submitted with manuscript
 
