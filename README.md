@@ -2,7 +2,7 @@
 
 **Version:** 1.0  
 **Date:** October 2025  
-**Author:** Tommy Lepesteur (tommy.lepesteur@hotmail.fr)  
+**Author:** Tommy Lepesteur   
 **ORCID:** 0009-0009-0577-9563  
 **License:** CC-BY 4.0 (data), MIT License (code)  
 **DOI:** [To be assigned by Zenodo upon publication]  
