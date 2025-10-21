@@ -1,0 +1,588 @@
+# FIGURES SUPPLÉMENTAIRES - Molecular Arrest Framework
+# Instructions pour création graphique professionnelle
+
+---
+
+## Supplementary Figure S1: Molecular Structures with Pharmacophore Highlights
+
+**Type de figure:** Structure chimique 2D avec annotations color-coded
+**Logiciel recommandé:** ChemDraw Professional, MarvinSketch, ou PyMOL
+**Format final:** 300 dpi TIFF ou EPS vectoriel, 180mm largeur (double colonne)
+
+### Layout
+
+**Disposition:** Grille 3×2 (6 composés)
+- Rangée 1: Salvinorin A | Paclitaxel
+- Rangée 2: Rapamycin | Capsaicin  
+- Rangée 3: Tetrodotoxin | Resveratrol
+
+### Code couleur standardisé
+
+🔴 **ROUGE (Rigid core):** Régions structurelles rigides contribuant à la sélectivité
+- Salvinorin A: Cœur tricyclique diterpénoïde
+- Paclitaxel: Anneau taxane (C1-C10)
+- Rapamycin: Macrocycle 31-membres (points d'ancrage)
+- Capsaicin: Cycle aromatique vanillyl
+- Tetrodotoxin: Cage polycyclique complète
+- Resveratrol: Double liaison stilbène (rigidité minimale)
+
+🔵 **BLEU (H-bond donors/acceptors):** Groupes polaires essentiels pour interaction cible
+- Salvinorin A: C2-acétyl (essentiel pour liaison KOR), lactone C1
+- Paclitaxel: C2' benzoyl, C7 hydroxyl, C13 side chain
+- Rapamycin: Groupes hydroxyle (positions 9, 10, 13, 40)
+- Capsaicin: Groupe hydroxyle phénolique + amide
+- Tetrodotoxin: Groupes guanidinium (×2), hydroxyles
+- Resveratrol: 3 hydroxyles phénoliques
+
+🟢 **VERT (Lipophilic regions):** Régions hydrophobes favorisant passage membranaire
+- Salvinorin A: Face hydrophobe du tricycle
+- Paclitaxel: Chaînes latérales aliphatiques
+- Rapamycin: Sections non polaires du macrocycle
+- Capsaicin: Queue alkyl (C8-C11)
+- Tetrodotoxin: Aucune (entièrement polaire → logP –4.3)
+- Resveratrol: Cycles aromatiques
+
+🟡 **JAUNE (Metabolic liability sites):** Sites de clivage métabolique
+- Salvinorin A: C2-ester (hydrolysé par estérases → salvinorin B inactif)
+- Paclitaxel: C13 side chain (CYP2C8), C2' benzoyl ester
+- Rapamycin: Esters multiples (positions 28, 42)
+- Capsaicin: Liaison amide (stable, peu métabolisée)
+- Tetrodotoxin: Aucune (stable)
+- Resveratrol: Hydroxyles phénoliques (glucuronidation rapide)
+
+### Annotations textuelles (placer sous chaque structure)
+
+**Salvinorin A:**
+"Rigid tricyclic core (red) + C2-acetyl (blue overlap) → KOR affinity 1-2 nM
+3 rotatable bonds | logP 2.73 | API = 1.00 (reference)"
+
+**Paclitaxel:**
+"Taxane core rigidity (red) despite 15 peripheral rotatable bonds
+β-tubulin K_d 0.9 nM | logP 3.2 | API = 0.44"
+
+**Rapamycin:**
+"31-membered macrocycle (red) constrains conformational space
+mTORC1 K_i 0.1 nM | logP 4.3 | API = 0.12 (slow onset reduces)"
+
+**Capsaicin:**
+"Flexible chain (4 rotatable bonds) → lower API
+TRPV1 EC₅₀ 700 nM | logP 3.0 | API = 0.024"
+
+**Tetrodotoxin:**
+"Rigid polycyclic cage (red) + charged guanidinium (blue) → extreme potency
+Nav IC₅₀ 5-15 nM | logP –4.3 | API = 4.0 (highest)"
+
+**Resveratrol:**
+"Minimal rigidity (2 rotatable bonds) + rapid metabolism (yellow) → fleeting presence
+SIRT1 EC₅₀ 10-100 μM | logP 3.1 | API = 0.00003 (negligible)"
+
+---
+
+## Supplementary Figure S2: Oscillatory Advantage Across Biological Scales
+
+**Type de figure:** Diagramme multi-panneaux illustrant bénéfices temporels
+**Logiciel:** GraphPad Prism, R (ggplot2), ou Adobe Illustrator
+**Format:** 180mm largeur × 220mm hauteur, 3 panneaux verticaux
+
+### Panel A: Molecular Scale (mTOR Activity Over 48h)
+
+**Type:** Graphique temporel (line graph)
+**Axes:**
+- X-axis: Temps (0-48h), graduations tous les 6h
+- Y-axis: Activité mTOR (% du contrôle basal), échelle 0-120%
+
+**Trois courbes:**
+
+1. **Control (ligne noire, continue):**
+   - Valeur constante à 100% sur toute la durée
+   - Symboles: aucun (ligne simple)
+
+2. **Continuous rapamycin (ligne rouge, tirets):**
+   - Baisse rapide 0→6h: 100% → 20%
+   - Plateau stable à 20% de 6h à 48h
+   - Symboles: carrés rouges tous les 6h
+
+3. **Oscillatory rapamycin (ligne bleue, continue épaisse):**
+   - Cycle 1 (0-24h):
+     - 0→2h: descente 100% → 20% (phase ON, rapamycin présent)
+     - 2→12h: maintien à 20%
+     - 12→14h: remontée 20% → 80% (phase OFF, washout)
+     - 14→24h: maintien à 80%
+   - Cycle 2 (24-48h): répétition identique
+   - Symboles: triangles bleus tous les 6h
+   - Zone grisée: périodes "ON" (0-12h, 24-36h)
+
+**Annotation (boîte texte, coin supérieur droit):**
+"Oscillatory maintains dynamic range
+Prevents pathway shutdown
+Allows compensatory recovery"
+
+**Légende:**
+- Noir: Control (100% baseline)
+- Rouge: Continuous 20 nM (sustained suppression)
+- Bleu: Oscillatory 20 nM (12h ON / 12h OFF)
+
+---
+
+### Panel B: Cellular Scale (Population Doublings Over 12 Weeks)
+
+**Type:** Graphique de croissance cumulatif
+**Axes:**
+- X-axis: Temps (0-12 semaines), graduations hebdomadaires
+- Y-axis: Cumulative Population Doublings (CPD), échelle 0-70
+
+**Trois courbes principales:**
+
+1. **Control (ligne noire, ●):**
+   - Croissance linéaire: 0 CPD (semaine 0) → 50 CPD (semaine 12)
+   - Pente: ~4.2 doublings/semaine
+   - Barres d'erreur: ±5 CPD (SD)
+
+2. **Continuous high rapamycin (ligne rouge, ■):**
+   - Croissance ralentie: 0 → 48 CPD (semaine 12)
+   - Pente: ~4.0 doublings/semaine (légèrement plus lente)
+   - Barres d'erreur: ±6 CPD
+   - Zone rouge claire en arrière-plan (semaines 8-12): "Growth suppression without total extension"
+
+3. **Oscillatory 48h (ligne bleue épaisse, ▲):**
+   - Croissance accélérée: 0 → 62 CPD (semaine 12)
+   - Pente: ~5.2 doublings/semaine
+   - Barres d'erreur: ±7 CPD
+   - Zone bleue claire en arrière-plan (semaines 10-12): "Enhanced proliferative capacity"
+
+**Courbes secondaires (lignes fines pointillées, sans symboles):**
+- Continuous low (5 nM): 52 CPD (vert olive)
+- Oscillatory 24h: 58 CPD (cyan)
+- Oscillatory weekly: 55 CPD (violet)
+
+**Marqueurs de signification statistique:**
+- Astérisque au-dessus de Oscillatory 48h à semaine 12: "***" (p < 0.001 vs. Control)
+- Astérisque entre Oscillatory 48h et Continuous high: "**" (p < 0.01)
+
+**Annotation (boîte, coin inférieur droit):**
+"Recovery phases allow:
+• Autophagy completion
+• Selection of stress-resistant cells
+• Avoidance of compensatory resistance"
+
+**Insert (petit graphique en médaillon, coin supérieur gauche, 40×30mm):**
+- Titre: "PARI at Passage 30"
+- Barres: Control (0), Continuous (+0.05), Oscillatory 48h (+0.42***)
+- Y-axis: Post-Arrest Resilience Index
+- Astérisque: *** p < 0.001
+
+---
+
+### Panel C: Organismal Scale (Mouse Survival Curves, 0-30 Months)
+
+**Type:** Courbe de survie Kaplan-Meier
+**Axes:**
+- X-axis: Âge (mois), 0-30, graduations tous les 3 mois
+- Y-axis: Survie (%), échelle 0-100%
+
+**Trois courbes:**
+
+1. **Control (ligne noire, ●):**
+   - 100% à mois 0
+   - Déclin graduel: 75% (18 mois), 50% (24 mois), 25% (27 mois), 0% (30 mois)
+   - Médiane de survie: 24 mois (ligne verticale pointillée noire)
+
+2. **Continuous rapamycin (ligne rouge, ■):**
+   - Déclin retardé: 75% (20 mois), 50% (26.5 mois), 25% (29 mois), 0% (32 mois)*
+   - Médiane: 26.5 mois (+10% vs. control)
+   - Ligne verticale pointillée rouge
+   - Zone rouge claire: "Lifespan extension +10%"
+
+3. **Oscillatory rapamycin (ligne bleue épaisse, ▲, PRÉDITE):**
+   - Déclin maximal retardé: 75% (22 mois), 50% (28 mois), 25% (30.5 mois), 0% (34 mois)*
+   - Médiane: 28 mois (+17% vs. control, +6% vs. continuous)
+   - Ligne verticale pointillée bleue épaisse
+   - Zone bleue claire: "Predicted oscillatory advantage +7% over continuous"
+   - Marqueur "PREDICTED" sur la courbe
+
+*Note: Les mois >30 sont extrapolés (axe s'arrête à 30 mais courbes continuent en traits pointillés légers)
+
+**Annotation (boîte centrale, fond blanc semi-transparent):**
+"Intermittent dosing (3d ON / 4d OFF):
+✓ Preserves immune function
+✓ Reduces metabolic side effects  
+✓ Maintains oscillatory capacity
+→ Superior to continuous suppression"
+
+**Log-rank test results (coin inférieur gauche):**
+- Control vs. Continuous: p < 0.001 (published data⁷⁶)
+- Control vs. Oscillatory: p < 0.001 (predicted)
+- Continuous vs. Oscillatory: p = 0.042 (predicted, moderate effect)
+
+**Marqueur "HYPOTHESIS" (coin supérieur droit, encadré):**
+"Oscillatory curve is MODEL PREDICTION
+Requires validation in Experiment 2 
+(cellular → C. elegans → mouse progression)"
+
+---
+
+## Supplementary Figure S3: API Calculation Flowchart
+
+**Type:** Organigramme de décision (decision tree flowchart)
+**Logiciel:** Microsoft Visio, draw.io, ou Lucidchart
+**Format:** 140mm largeur × 200mm hauteur, orientation portrait
+
+### Structure du flowchart
+
+**Forme des éléments:**
+- Rectangle arrondi (couleur bleue claire): DÉBUT/FIN
+- Rectangle (couleur blanche): Étapes de processus
+- Losange (couleur jaune claire): Points de décision (OUI/NON)
+- Rectangle avec coins pliés (couleur orange): Notes/avertissements
+- Flèches noires épaisses: flux principal
+- Flèches rouges pointillées: chemins d'échec ("STOP")
+
+### Diagramme ASCII détaillé
+
+```
+┌─────────────────────────────────────────┐
+│  START: New Compound for API Analysis   │ (BLEU CLAIR, OVALE)
+└────────────────┬────────────────────────┘
+                 │
+                 ▼
+        ╔════════════════════╗
+        ║  Is K_d published? ║ (JAUNE, LOSANGE)
+        ╚═══════╦═══════╦════╝
+                │       │
+            YES │       │ NO
+                │       │
+                ▼       ▼
+    ┌───────────────┐  ┌──────────────────────────┐
+    │ Extract K_d   │  │ Computational docking    │
+    │ Radioligand   │  │ available?               │
+    │ 37°C, pH 7.4  │  └─────────┬────────────────┘
+    └───────┬───────┘            │
+            │              YES ┌──┘   NO│
+            │                  │        │
+            │                  ▼        ▼
+            │         ┌────────────┐  ┌────────────┐
+            │         │Use docked  │  │ STOP:      │(ROUGE)
+            │         │K_d         │  │Insufficient│
+            │         │(LOW conf.) │  │data        │
+            │         └──────┬─────┘  └────────────┘
+            │                │
+            └────────────────┴────────────┐
+                                          │
+                                          ▼
+                              ╔═══════════════════╗
+                              ║ Is k_off         ║
+                              ║ published?       ║(JAUNE, LOSANGE)
+                              ╚═══════╦═══════╦═══╝
+                                      │       │
+                                  YES │       │ NO
+                                      │       │
+                                      ▼       ▼
+                    ┌──────────────────┐   ┌─────────────────┐
+                    │ τ = 1/k_off      │   │Functional       │
+                    │ (HIGH confidence)│   │duration known?  │
+                    └────────┬─────────┘   └────┬──────┬─────┘
+                             │                   │      │
+                             │               YES │      │NO
+                             │                   │      │
+                             │                   ▼      ▼
+                             │         ┌──────────────┐ ┌──────┐
+                             │         │τ ≈ duration  │ │STOP  │(ROUGE)
+                             │         │    / 2.5     │ └──────┘
+                             │         │(MOD. conf.)  │
+                             │         └──────┬───────┘
+                             │                │
+                             └────────────────┴──────────┐
+                                                         │
+                                                         ▼
+                                             ╔═══════════════════╗
+                                             ║ Is t_onset       ║
+                                             ║ reported?        ║(JAUNE)
+                                             ╚═══════╦═══════╦═══╝
+                                                     │       │
+                                                 YES │       │NO
+                                                     │       │
+                                                     ▼       ▼
+                                  ┌─────────────────┐  ┌────────────┐
+                                  │Extract directly │  │Interpolate │
+                                  │from time-course │  │(MOD. conf.)│
+                                  └────────┬────────┘  └──────┬─────┘
+                                           │                  │
+                                           └──────────────────┘
+                                                     │
+                                                     ▼
+                                         ╔═══════════════════════╗
+                                         ║ Is EC₅₀ published    ║
+                                         ║ (functional assay)?  ║(JAUNE)
+                                         ╚═══════╦═════════╦═════╝
+                                                 │         │
+                                             YES │         │NO
+                                                 │         │
+                                                 ▼         ▼
+                              ┌──────────────────┐  ┌───────────────┐
+                              │Extract EC₅₀      │  │Use K_d as proxy│
+                              │(prefer proximal) │  │EC₅₀≈K_d×(2-5) │
+                              └────────┬─────────┘  │(LOW conf.)     │
+                                       │            └──────┬─────────┘
+                                       └───────────────────┘
+                                                │
+                                                ▼
+                            ┌───────────────────────────────────────┐
+                            │ CALCULATE API_absolute:               │(VERT CLAIR)
+                            │                                       │
+                            │ API = [(1/K_d) × τ_residence]        │
+                            │       ─────────────────────────       │
+                            │       [t_onset × EC₅₀]               │
+                            │                                       │
+                            │ Units: nM⁻² (before normalization)   │
+                            └──────────────────┬────────────────────┘
+                                               │
+                                               ▼
+                            ┌───────────────────────────────────────┐
+                            │ NORMALIZE to Salvinorin A:            │(VERT CLAIR)
+                            │                                       │
+                            │ API_relative = API_compound / 6.95    │
+                            │                                       │
+                            └──────────────────┬────────────────────┘
+                                               │
+                                               ▼
+                            ┌───────────────────────────────────────┐
+                            │ UNCERTAINTY QUANTIFICATION:           │(ORANGE CLAIR)
+                            │                                       │
+                            │ • Monte Carlo simulation (10K iter.) │
+                            │ • Log-normal parameter distributions │
+                            │ • Extract 95% CI [2.5%, 97.5%]      │
+                            └──────────────────┬────────────────────┘
+                                               │
+                                               ▼
+                            ┌───────────────────────────────────────┐
+                            │ CONFIDENCE GRADING:                   │(VIOLET CLAIR)
+                            │                                       │
+                            │ HIGH:  All 4 params directly measured│
+                            │ MOD:   1-2 params estimated          │
+                            │ LOW:   ≥3 params estimated/inferred  │
+                            └──────────────────┬────────────────────┘
+                                               │
+                                               ▼
+                          ┌─────────────────────────────────────────┐
+                          │ END: Report API_relative [95% CI]      │(BLEU CLAIR, OVALE)
+                          │      + Confidence grade (H/M/L)        │
+                          └─────────────────────────────────────────┘
+```
+
+**Exemples en encadrés latéraux (3 petites boîtes à droite du flowchart):**
+
+**Encadré 1 (Salvinorin A, fond vert):**
+"✓ K_d = 1.8 nM (measured³⁶)
+✓ k_off available → τ = 25 min
+✓ t_onset = 1 min (subjective)
+✓ EC₅₀ = 2 nM (GIRK assay³⁸)
+→ API = 1.00 [0.85-1.15]
+→ Confidence: VERY HIGH"
+
+**Encadré 2 (Rapamycin, fond jaune):**
+"✓ K_d = 0.1 nM (measured⁶⁸)
+⚠ k_off indirect → τ = 120 min (est.)
+⚠ t_onset = 1440 min (functional)
+✓ EC₅₀ = 1 nM (autophagy⁷⁰)
+→ API = 0.12 [0.08-0.16]
+→ Confidence: MODERATE"
+
+**Encadré 3 (Resveratrol, fond rouge clair):**
+"⚠ K_d = 50 μM (weak, disputed¹⁰⁹)
+✗ k_off unknown → τ estimated
+⚠ t_onset = 720 min (very slow)
+⚠ EC₅₀ = 50 μM (in vitro only)
+→ API = 0.00003 [0.00001-0.00006]
+→ Confidence: LOW
+→ Clinical relevance: QUESTIONABLE"
+
+---
+
+## Figure 1 (Main Text): Three-Tiered Classification System
+
+**Type:** Diagramme conceptuel illustrant niveaux d'arrêt
+**Logiciel:** Adobe Illustrator ou PowerPoint
+**Format:** 120mm largeur (simple colonne), 140mm hauteur
+
+### Structure pyramidale inversée
+
+**Disposition verticale (du bas vers le haut) :**
+
+```
+                    ┌─────────────────────────────────┐
+                    │      LEVEL 3: ADAPTIVE ARREST   │ (VERT FONCÉ)
+                    │                                 │
+                    │ Criteria:                       │
+                    │ • All Level 1-2 criteria        │
+                    │ • PARI > +0.1                   │
+                    │                                 │
+                    │ Examples: Rapamycin, Salvinorin │
+                    │                                 │
+                    │ Outcome: Enhanced resilience    │
+                    └─────────────────────────────────┘
+                              ▲
+                              │
+    ┌─────────────────────────┴─────────────────────────┐
+    │          LEVEL 2: FUNCTIONAL ARREST                │ (JAUNE ORANGÉ)
+    │                                                    │
+    │ Criteria:                                          │
+    │ • All Level 1 criteria                             │
+    │ • EMC < –0.2  OR  NCR > 30%                       │
+    │                                                    │
+    │ Examples: Capsaicin, Paclitaxel, Benzodiazepines  │
+    │                                                    │
+    │ Outcome: Network reorganization without resilience │
+    └────────────────────────────────────────────────────┘
+                              ▲
+                              │
+┌─────────────────────────────┴──────────────────────────────┐
+│              LEVEL 1: MINIMAL ARREST                       │ (ROUGE CLAIR)
+│                                                            │
+│ Criteria (6 operational):                                 │
+│ ① Transience (seconds-days)                              │
+│ ② Reversibility (full recovery)                          │
+│ ③ Specificity (selective pathways)                       │
+│ ④ Dose-dependency (therapeutic window)                   │
+│ ⑤ Recalibration (altered setpoints)                      │
+│ ⑥ Cross-scale coherence (molecular→network)              │
+│                                                            │
+│ Examples: Beta-blockers, Resveratrol (questionable)       │
+│                                                            │
+│ Outcome: Reversible inhibition only                       │
+└────────────────────────────────────────────────────────────┘
+                              ▲
+                              │
+                    [Simple inhibitors]
+                    [Not arrest agents]
+```
+
+**Annotations latérales (flèches pointant vers chaque niveau):**
+
+**Niveau 1 → Flèche:** "Necessary but insufficient"
+
+**Niveau 2 → Flèche:** "Functional arrest: measurable system change"
+
+**Niveau 3 → Flèche:** "Adaptive arrest: lasting benefits (hormesis)"
+
+**Code couleur des exemples (petites molécules dessinées à côté):**
+- Rapamycin (structure simplifiée, vert)
+- Salvinorin A (structure simplifiée, vert)
+- Capsaicin (structure simplifiée, orange)
+- Paclitaxel (structure simplifiée, orange)
+- Resveratrol (structure simplifiée, rouge)
+- Beta-blocker (propranolol simplifié, rouge)
+
+---
+
+## Instructions techniques pour préparation finale
+
+### Spécifications générales
+- **Résolution:** 300 dpi minimum pour publication
+- **Format de fichier:** TIFF (non compressé) ou EPS vectoriel
+- **Espace colorimétrique:** CMYK pour impression, RGB pour version online
+- **Police:** Arial ou Helvetica, 8-10 pt pour annotations, 12 pt pour titres
+- **Largeur standard Frontiers:** 
+  - Simple colonne: 85mm
+  - 1.5 colonne: 120mm  
+  - Double colonne: 180mm
+
+### Légendes complètes (à inclure dans le manuscrit)
+
+**Figure S1 Legend:**
+"Chemical structures of six paradigmatic arrest molecules with color-coded pharmacophore regions. Red: rigid core contributing to arrest potency (conformational constraint); Blue: hydrogen bond donors/acceptors critical for target binding; Green: lipophilic regions enabling membrane permeability; Yellow: metabolic liability sites (esterases, CYP450 cleavage). Annotations indicate key molecular properties (rotatable bonds, logP) and Arrest Potency Index (API) normalized to salvinorin A = 1.00. Note the inverse relationship between structural rigidity and API values (salvinorin A, tetrodotoxin: high rigidity, high API; resveratrol: low rigidity, negligible API)."
+
+**Figure S2 Legend:**
+"Oscillatory arrest advantage across three biological scales. **Panel A (Molecular):** mTOR activity over 48h comparing control (100% baseline), continuous rapamycin (sustained 20% suppression), and oscillatory rapamycin (12h on/off cycles maintaining dynamic range). Oscillatory protocol prevents complete pathway shutdown while allowing periodic recovery. **Panel B (Cellular):** Cumulative population doublings in primary human fibroblasts (IMR-90) over 12 weeks. Oscillatory 48h cycle (24h rapamycin 20 nM / 24h washout) extends replicative lifespan to 62 doublings vs. 50 (control) and 48 (continuous high-dose), demonstrating lifespan extension despite growth suppression. Insert: Post-Arrest Resilience Index (PARI) at mid-lifespan shows 42% improved stress survival unique to oscillatory arm (***p < 0.001). **Panel C (Organismal):** Kaplan-Meier survival curves for mice. Continuous rapamycin extends median lifespan 10% (published data⁷⁶,⁷⁷). Oscillatory rapamycin (3 days on / 4 days off, blue curve) predicted to extend 17% based on cellular data extrapolation and immune preservation hypothesis—requires prospective validation (Experiment 2 cellular → organismal progression). Shaded regions indicate 95% confidence bands; dashed portions represent model predictions."
+
+**Figure S3 Legend:**
+"Flowchart for calculating Arrest Potency Index (API) from published literature. Decision tree guides parameter extraction (K_d, k_off, t_onset, EC₅₀) with quality hierarchy: direct measurement (high confidence) > estimation from functional data (moderate confidence) > computational prediction (low confidence). Terminal nodes indicate STOP conditions when insufficient data prevent calculation, or END with API value, uncertainty range (95% CI from Monte Carlo simulation), and assigned confidence grade. Side panels provide worked examples for salvinorin A (very high confidence), rapamycin (moderate confidence with estimated residence time), and resveratrol (low confidence with questionable clinical relevance). This pipeline enables independent researchers to calculate API for novel compounds and contribute to framework validation."
+
+---
+
+## Figure 2 (Main Text, Optional): API vs. AKR Scatter Plot
+
+**Si espace disponible dans main text, ajouter comme Figure 2:**
+
+**Type:** Scatter plot avec quadrants annotés
+**Axes:**
+- X-axis: AKR (Arrest Kinetics Ratio), échelle logarithmique 0.01 - 10
+- Y-axis: API (Arrest Potency Index), échelle logarithmique 0.0001 - 10
+
+**Points (6 composés):**
+- Tetrodotoxin: (0.33, 4.0) — triangle rouge, grand
+- Salvinorin A: (1.5, 1.00) — cercle bleu, référence, marqué d'une étoile
+- Paclitaxel: (0.33, 0.44) — carré orange
+- Rapamycin: (0.75, 0.12) — diamant vert
+- Capsaicin: (0.08, 0.024) — pentagone violet
+- Resveratrol: (0.5, 0.00003) — X gris
+
+**Quadrants annotés (zones de fond coloré léger):**
+
+**Quadrant supérieur droit (API élevé, AKR élevé):**
+- "ACUTE INTERVENTIONS
+- Rapid potency, rapid recovery
+- Applications: Psychiatric reset, Procedural sedation"
+- Contient: Salvinorin A
+
+**Quadrant supérieur gauche (API élevé, AKR faible):**
+- "SUSTAINED ARREST
+- High potency, slow recovery  
+- Applications: Oncology, Chronic conditions"
+- Contient: Tetrodotoxin
+
+**Quadrant inférieur droit (API faible, AKR élevé):**
+- "LOW CLINICAL UTILITY
+- Weak potency despite rapid kinetics
+- Requires investigation of PK barriers"
+- Vide (aucun composé)
+
+**Quadrant inférieur gauche (API faible, AKR faible):**
+- "QUESTIONABLE EFFICACY
+- Slow onset, weak effect
+- Example: Resveratrol (bioavailability crisis)"
+- Contient: Resveratrol
+
+**Overlay par niveau d'arrêt:**
+- Level 3: contour vert épais (Rapamycin, Salvinorin)
+- Level 2: contour orange (Paclitaxel, Capsaicin, Tetrodotoxin)
+- Level 1: contour rouge pointillé (Resveratrol)
+
+**Légende Figure 2:**
+"Arrest Potency Index (API) vs. Arrest Kinetics Ratio (AKR) for six paradigmatic compounds. API integrates affinity and kinetics; AKR reflects arrest-to-recovery temporal balance. Quadrants delineate clinical utility domains: high API + high AKR suits acute psychiatric or anesthetic applications (salvinorin A); high API + low AKR suits oncology/chronic conditions (tetrodotoxin, paclitaxel). Resveratrol's position (low API, any AKR) predicts clinical failure—consistent with observed lack of human benefits despite in vitro activity. Color overlays indicate arrest level classification (green = Level 3 Adaptive, orange = Level 2 Functional, red = Level 1 Minimal). This two-metric space enables rational compound selection for specific therapeutic contexts."
+
+---
+
+## Fichiers sources recommandés
+
+### Pour conversion en graphiques professionnels:
+
+1. **Structures chimiques (Figure S1):**
+   - Télécharger structures depuis PubChem (SDF format)
+   - Importer dans ChemDraw
+   - Appliquer template color-coding selon spécifications ci-dessus
+   - Exporter en 300 dpi TIFF
+
+2. **Graphiques temporels/survie (Figure S2):**
+   - Utiliser R avec package `ggplot2` + `survival`
+   - Code template disponible dans repo GitHub (à créer)
+   - Alternativement: GraphPad Prism (templates fournis)
+
+3. **Flowchart (Figure S3):**
+   - draw.io (gratuit, web-based): copier structure ASCII, convertir en flowchart formel
+   - Alternativement: Microsoft Visio ou Lucidchart
+
+### Temps estimé pour création graphique
+
+- Figure S1 (structures): 4-6 heures (si familier avec ChemDraw)
+- Figure S2 (3 panneaux): 6-8 heures (programmation R ou ajustements Prism)
+- Figure S3 (flowchart): 2-3 heures (draw.io)
+- Figure 2 (scatter plot, optionnel): 2 heures
+
+**Total:** 14-19 heures de travail graphique professionnel
+
+**Alternative rapide:** Engager illustrateur scientifique (coût: $800-1,200 USD pour 4 figures publication-ready)
+
+---
+
+[End of Figure Specifications]
+

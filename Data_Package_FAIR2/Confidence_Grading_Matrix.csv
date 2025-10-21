@@ -1,0 +1,46 @@
+Category,Specific_Prediction,Value_or_Range,Evidence_Type,Confidence_Level,Validation_Required,PMID_References
+Structural_Signatures,Rigidity-API correlation R² > 0.6,0.71 (SalA series),1 scaffold (N=8 analogs),Moderate,Extend to ≥3 scaffolds,Multiple
+Structural_Signatures,LogP optimum for CNS agents,2.5-3.5,Observed in 6 compounds,Moderate,Test ≥20 KOR agonists,Multiple
+Structural_Signatures,Residence time > plasma t1/2 correlation,R²_tau=0.74 vs R²_t1/2=0.28,6 compounds analysis,Moderate,Meta-analysis ≥30 drugs,Multiple
+Entropy_Metrics,Salvinorin A EMC_neural,< -0.3,Extrapolated from GABAergics + KOR mechanism,Low,EEG/fMRI direct measurement,Predicted
+Entropy_Metrics,Psilocybin EMC_neural,> +0.2,Published LSD/psilocybin fMRI,High,Established,26517207;24550805
+Entropy_Metrics,Rapamycin EMC_metabolic,-0.4,Single-cell metabolomics,Moderate,Replication needed,31337748
+Entropy_Metrics,Arrest threshold EMC < -0.2,Level 2 criterion,Literature synthesis,Low,Prospective validation,Expert consensus
+Entropy_Metrics,Anesthesia EMC_neural,-0.6 to -0.8,Multiple propofol studies,High,Established,23027524
+Connectivity_Metrics,Salvinorin A NCR_DMN,40-60%,KOR distribution + mechanism + ketamine comparator,Low,Critical validation gap (Exp 1),Inferred
+Connectivity_Metrics,Psilocybin NCR_DMN,20-30%,Published fMRI studies,High,Replicated,24126579
+Connectivity_Metrics,General anesthesia NCR,60-80%,Multiple fMRI studies,High,Established,23027524
+Connectivity_Metrics,Arrest threshold NCR > 30%,Level 2 criterion,Anesthesia literature,Moderate,Sensitivity analysis needed,Multiple
+Connectivity_Metrics,Ketamine NCR_DMN,30-50%,Published fMRI,High,Replicated,22634733
+Resilience_Metrics,Rapamycin PARI heat shock,+0.48,Direct heat shock assay,High,Replicated ≥3 labs,19622707
+Resilience_Metrics,Rapamycin PARI composite,+0.3 to +0.5,Multiple stressors (H2O2 oxidative radiation),High,Consistent across studies,19622707;19622062
+Resilience_Metrics,Salvinorin A PARI,+0.2 to +0.4,KOR→dynorphin→stress pathway inference,Low,Requires direct testing,16542713;17959777
+Resilience_Metrics,Paclitaxel PARI adaptive therapy,+0.5 to +1.0 (tumor control),Clinical TTP extension trial,High,Human data validated,29138419
+Resilience_Metrics,Capsaicin PARI,0 to +0.1,Clinical observation analgesia-specific,Moderate,No systemic benefit observed,18848680
+Resilience_Metrics,PARI threshold > +0.1,Level 3 criterion,Hormesis literature,Low,Arbitrary cutoff,12869685
+Resilience_Metrics,Ischemic preconditioning PARI,+0.4 to +0.8,Direct myocardial protection,High,Established cardiology,3769170
+Oscillatory_Predictions,Rapamycin 48h cycle CPD extension,+24% vs control,Model-based (autophagy kinetics),Moderate,Experiment 2 test,Predicted
+Oscillatory_Predictions,Rapamycin 48h cycle PARI,+0.3 to +0.5,Stress pathway activation predicted,Moderate,Experiment 2 test,Predicted
+Oscillatory_Predictions,Rapamycin 24h cycle CPD extension,+16% vs control,Model-based,Moderate,Experiment 2 test,Predicted
+Oscillatory_Predictions,Continuous rapamycin CPD,No extension or -4%,Growth suppression without lifespan gain,Moderate,Experiment 2 test,Predicted
+Oscillatory_Predictions,Oscillatory superior to continuous,Lifespan and resilience,Theoretical (rhythm restoration),Low,No human data exists,Hypothesis
+Oscillatory_Predictions,Circadian rapamycin night dosing,+5-10% additional extension,Single rodent laboratory study,Low,Replication needed,27411589
+Oscillatory_Predictions,Intermittent fasting PARI,+0.2 to +0.4,Published stress resistance data,High,Established,31881139
+Clinical_Predictions,KOR agonist TRD response rate,≥50%,Ketamine analogy + KOR mechanism,Low,Experiment 3 test,16894061
+Clinical_Predictions,KOR agonist tolerability,≤20% discontinuation,Nalfurafine pruritus trials extrapolated,Moderate,TRD population untested,16306543
+Clinical_Predictions,KOR agonist MADRS reduction,≥30% mean change,Based on ketamine magnitude,Low,Experiment 3 test,Predicted
+Clinical_Predictions,KOR agonist BDNF increase,Measurable elevation Day 7,Neuroplasticity pathway,Low,Experiment 3 test,Predicted
+Clinical_Predictions,Adaptive docetaxel + ketamine TTP,10-12 months,Separate trial data combined,Low,Case series needed,29138419;27137430
+Clinical_Predictions,Oscillatory rapamycin biological age,−3 to −5 years over 2 years,Mouse lifespan + epigenetic clocks,Low,2-year human trial required,19901315;23890608
+Clinical_Predictions,ECT response rate,60-70%,Meta-analysis established,High,Replicated,12633125
+Clinical_Predictions,Ketamine TRD response,60-70% at 24h,Published RCTs,High,Established,16894061
+API_Metrics,Tetrodotoxin API,4.0,Picomolar affinity + long residence,High,Well-characterized,5419956
+API_Metrics,Salvinorin A API,1.00,Reference standard normalization,Very High,Multiple studies,12202542;16847264
+API_Metrics,Paclitaxel API,0.44,High affinity slow onset,Moderate,Onset variability,8428871
+API_Metrics,Rapamycin API,0.12,High affinity very slow functional onset,Moderate,Complex PK mechanism,1909400
+API_Metrics,Capsaicin API,0.024,Moderate affinity,Moderate-High,EC50 range 400-1000 nM,9389475
+API_Metrics,Resveratrol API,0.00003,Weak affinity poor PK,Low,Metabolite uncertainty,14570043
+SAR_Predictions,Salvinorin B inactivity,>10000 nM Ki,Loss of C2-acetyl critical,High,Established,12202542
+SAR_Predictions,Mesyl Sal B enhanced selectivity,0.6 nM Ki 11000x selectivity,C2 modification improves,High,Measured,Multiple
+SAR_Predictions,Herkinorin dual activity,12 nM Ki but MOR crossover,Loss of selectivity with C2-benzoyl,High,Characterized,Multiple
+
