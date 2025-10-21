@@ -1,9 +1,42 @@
-# Fichiers personnels et de soumission
-Cover_Letter_Template.txt
-INSTRUCTIONS_SOUMISSION_FINALE.txt
-VERIFICATION_FINALE.txt
-FAIR2_Submission_Checklist.txt
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+dist/
+build/
+*.egg-info/
 
-# Fichiers générés par le système d'exploitation
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Outputs
+figures/*.png
+figures/*.tiff
+!figures/Figure_S*_draft.*
+*.log
+*.tmp
+
+# Données sensibles (si ajout futur)
+*_private.csv
+*_confidential.*
+
+# Excel temporaires
+~$*.xlsx
