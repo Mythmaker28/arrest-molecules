@@ -1,4 +1,10 @@
 import unittest
+import sys
+from pathlib import Path
+
+# Add parent directory to path to import modules
+sys.path.insert(0, str(Path(__file__).parent))
+
 from Python_Code_API_Monte_Carlo import calculate_API_absolute, calculate_API_relative, assign_confidence_grade
 
 class TestAPICalculations(unittest.TestCase):
