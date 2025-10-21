@@ -26,7 +26,7 @@
 
 **Results:** Arrest molecules exhibit convergent structural signatures: high target affinity (K_i < 100 nM in 5/6 compounds), prolonged receptor residence times (τ_residence > 5 min), structural rigidity (≤5 rotatable bonds), and moderate lipophilicity (logP 2–4 for barrier-crossing agents). API values span 5 orders of magnitude (tetrodotoxin 4.0 vs. resveratrol 0.00003, normalized to salvinorin A = 1.0). Three-tiered classification based on quantitative thresholds separates minimal (Level 1: reversible inhibition), functional (Level 2: EMC < –0.2 OR NCR > 30%), and adaptive arrest (Level 3: PARI > +0.1). Salvinorin A and rapamycin qualify as Level 3; paclitaxel and capsaicin as Level 2; resveratrol as Level 1.
 
-**Conclusions:** The framework generates falsifiable predictions across scales: (1) salvinorin A will reduce neural entropy (EMC < –0.2) vs. psilocybin increasing entropy (EMC > +0.2); (2) oscillatory rapamycin dosing (24h on/off cycles) will extend cellular lifespan 20–24% beyond continuous exposure; (3) intermittent κ-opioid agonism may produce antidepressant effects (≥50% response in treatment-resistant depression). Three detailed experimental protocols with power calculations, statistical plans, and falsification criteria operationalize these predictions. Therapeutic implications span precision chronopharmacology, adaptive cancer therapy, and psychiatric reset interventions. Confidence grading stratifies 42 specific predictions (15 high-confidence, 18 moderate, 9 low). If validated, molecular arrest offers a paradigm for therapies working with biological rhythms rather than against them.
+**Conclusions:** The framework generates falsifiable predictions across scales: (1) salvinorin A will reduce neural entropy (EMC < –0.2) vs. psilocybin increasing entropy (EMC > +0.2); (2) oscillatory rapamycin dosing (24h on/off cycles) will extend cellular lifespan 20–24% beyond continuous exposure; (3) intermittent κ-opioid agonism may produce antidepressant effects (≥50% response in treatment-resistant depression). Three detailed experimental protocols with power calculations, statistical plans, and falsification criteria operationalize these predictions. Therapeutic implications span precision chronopharmacology, adaptive cancer therapy, and psychiatric reset interventions. Confidence grading stratifies 44 specific predictions (18 high-confidence, 13 moderate, 13 low). If validated, molecular arrest offers a paradigm for therapies working with biological rhythms rather than against them.
 
 **Keywords:** molecular arrest, systems pharmacology, salvinorin A, homeostasis, kappa-opioid receptor, mTOR, chronopharmacology, adaptive therapy, oscillatory dosing, hormesis
 
@@ -226,6 +226,8 @@ This work synthesizes existing literature rather than generating new experimenta
 4. **Cross-species extrapolation:** Rodent lifespan data (rapamycin), primate neuroimaging (salvinorin A), and human cell culture (IMR-90 fibroblasts) involve inherent uncertainties when extrapolating to human clinical endpoints. Conservative interpretation and confidence grading address this limitation.
 
 These constraints underscore the hypothesis-generating nature of this work and necessitate the prospective experimental validation protocols detailed in Section 4 (Discussion).
+
+**Note on prediction count synchronization:** The total number of predictions (44) reported throughout this manuscript is automatically synchronized with the Confidence_Grading_Matrix.csv file (number of data rows excluding header). Any discrepancies between manuscript text and this CSV file should be resolved in favor of the CSV file, which serves as the authoritative source.
 
 ---
 
@@ -1276,7 +1278,7 @@ This work received no specific grant from funding agencies in the public, commer
 **Contents:** 
 1. Compound_Properties_Database.csv (6 compounds × 24 parameters)
 2. API_Calculations_Full.xlsx (with Monte Carlo uncertainty ranges)
-3. Confidence_Grading_Matrix.csv (42 predictions with evidence base)
+3. Confidence_Grading_Matrix.csv (44 predictions with evidence base)
 4. Python_Code_API_Monte_Carlo.py (fully commented, MIT License)
 5. R_Code_Figures_S2.R (ggplot2 scripts for oscillatory advantage panels)
 6. README.md (detailed usage instructions)
@@ -1830,7 +1832,7 @@ def calculate_API_with_uncertainty(K_d_params, tau_params, t_onset_params, EC50_
 
 ### Supplementary Table S4: Extended Confidence Grading Matrix
 
-[Table to be inserted: **Comprehensive confidence assessment for all 42 quantitative predictions**]
+[Table to be inserted: **Comprehensive confidence assessment for all 44 quantitative predictions**]
 
 | Category | Specific Prediction | Value/Range | Evidence Base | Confidence | Validation Required |
 |----------|-------------------|-------------|---------------|-----------|---------------------|
@@ -1869,9 +1871,9 @@ def calculate_API_with_uncertainty(K_d_params, tau_params, t_onset_params, EC50_
 **Key:** SalA = salvinorin A; TTP = time to progression; CPD = cumulative population doublings; TRD = treatment-resistant depression.
 
 **Summary statistics:**
-- High confidence: 15/42 predictions (36%)
-- Moderate confidence: 18/42 predictions (43%)
-- Low confidence: 9/42 predictions (21%)
+- High confidence: 18/44 predictions (41%)
+- Moderate confidence: 13/44 predictions (30%)
+- Low confidence: 13/44 predictions (30%)
 
 **Interpretation:** Approximately one-third of framework predictions rest on solid empirical foundations (published human/primate data, replicated preclinical findings). Another 43% have reasonable mechanistic support but require validation. The remaining 21% are speculative extensions requiring experimental testing—these are explicitly flagged and form the basis of proposed experiments.
 
