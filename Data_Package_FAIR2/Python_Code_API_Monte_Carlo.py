@@ -4,7 +4,7 @@ Arrest Potency Index (API) Calculator with Monte Carlo Uncertainty Quantificatio
 
 Author: Tommy Lepesteur
 License: MIT
-Version: 1.0
+Version: 1.1
 Date: October 2025
 
 This script calculates the Arrest Potency Index (API) for molecular arrest agents

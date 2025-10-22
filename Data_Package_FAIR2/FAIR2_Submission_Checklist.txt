@@ -7,8 +7,8 @@ SECTION 1: CORE DATA (MANDATORY)
 ================================================================================
 
 ✅ Main data tables included
-   → Compound_Properties_Database.csv (6 compounds × 24 parameters)
-   → Confidence_Grading_Matrix.csv (42 predictions stratified)
+   → Compound_Properties_Database.csv (10 compounds × 36 parameters)
+   → Confidence_Grading_Matrix.csv (44 predictions stratified)
    → Experimental_Protocols_Summary.csv (3 experiments detailed)
 
 ✅ Data in clear table format
@@ -106,9 +106,9 @@ SECTION 5: PEOPLE (OPTIONAL BUT RECOMMENDED)
 ================================================================================
 
 ✅ All contributors listed
-   → Tommy Mythmaker (sole author)
+   → Tommy Lepesteur (sole author)
      - Affiliation: Independent Researcher, Rennes, France
-     - Email: tommy.mythmaker@proton.me
+     - Email: tommy.lepesteur@hotmail.fr
      - Role: Conception, data extraction, calculations, writing
    
    → Dr. Marie Legrand (acknowledged)
@@ -169,7 +169,7 @@ SECTION 7: FUNDING (OPTIONAL BUT RECOMMENDED)
    → Provided in Abstract and Introduction sections of manuscript
 
 ✅ Project website
-   → GitHub repository planned: https://github.com/molecular-arrest-framework
+   → GitHub repository planned: https://github.com/Mythmaker28/arrest-molecules
      (to be created upon manuscript acceptance)
    → Zenodo DOI: To be assigned upon publication
 
@@ -225,7 +225,7 @@ COMPLETED:
 ✅ README.md created
 ✅ Core data CSV files created
 ✅ Python code with MIT License
-✅ Confidence grading matrix (42 predictions)
+✅ Confidence grading matrix (44 predictions)
 ✅ Figure specifications detailed (Figures_Supplementaires.txt)
 
 REQUIRES ACTION BEFORE SUBMISSION:
@@ -245,7 +245,7 @@ OPTIONAL ENHANCEMENTS:
    - First unifying framework for dampening molecules
    - Explicit falsifiability (rare in theory papers)
    - Dual-use section (responsible innovation)
-   - 42 predictions with confidence grading
+   - 44 predictions with confidence grading
 ◯ Suggest 4-6 expert reviewers:
    - Chronopharmacology: Satchidananda Panda (Salk Institute)
    - Systems pharmacology: Ravi Iyengar (Mount Sinai)
@@ -321,7 +321,7 @@ CONTACT FOR DATASET ISSUES
 ================================================================================
 
 Primary contact: tommy.lepesteur@hotmail.fr
-GitHub issues: https://github.com/molecular-arrest-framework/issues (post-publication)
+GitHub issues: https://github.com/Mythmaker28/arrest-molecules/issues (post-publication)
 Zenodo support: Via DOI landing page (post-publication)
 
 Response time commitment: 7 business days for data requests, 14 days for controlled access

@@ -1283,7 +1283,7 @@ This work received no specific grant from funding agencies in the public, commer
 5. R_Code_Figures_S2.R (ggplot2 scripts for oscillatory advantage panels)
 6. README.md (detailed usage instructions)
 
-**GitHub mirror:** https://github.com/molecular-arrest-framework (to be created upon acceptance)
+**GitHub mirror:** https://github.com/Mythmaker28/arrest-molecules (to be created upon acceptance)
 - Allows community contributions, issue tracking, and version control
 - Enables extension to novel compounds by independent researchers
 

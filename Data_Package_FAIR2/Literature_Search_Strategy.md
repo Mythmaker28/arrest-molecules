@@ -1,7 +1,7 @@
 # Literature Search Strategy
 ## Molecular Arrest Framework Research Data Package
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Date:** October 2025  
 **Author:** Tommy Lepesteur  
 **Search Period:** January 2000 – October 2025  
@@ -10,7 +10,7 @@
 
 ## 1. Objective
 
-Identifier et extraire des données pharmacologiques, pharmacocinétiques et systémiques pour 6 composés paradigmatiques présentant des propriétés "d'arrest moléculaire" (pause transitoire et réversible dans des processus biologiques).
+Identifier et extraire des données pharmacologiques, pharmacocinétiques et systémiques pour 10 composés représentant le continuum arrest-oscillation (6 composés arrest principaux + 4 composés continuum : ibogaine, noribogaine, psilocybin, LSD).
 
 ---
 
@@ -311,8 +311,9 @@ Chaque donnée extraite notée :
 ## 10. Update Policy
 
 ### 10.1 Version Control
-- **v1.0 (October 2025):** Initial dataset accompanying manuscript submission
-- **v1.1 (planned):** Incorporation of new salvinorin analogs (8 compounds from Supplementary Table S2)
+- **v1.1 (October 2025):** Extended dataset to 10 compounds (added ibogaine, noribogaine, psilocybin, LSD)
+- **v1.0 (October 2025):** Initial dataset accompanying manuscript submission (6 compounds)
+- **v1.2 (planned):** Incorporation of salvinorin analogs (8 compounds from Supplementary Table S2)
 - **v2.0 (planned):** Integration of Experiment 1 results (fMRI entropy data)
 
 ### 10.2 Continuous Monitoring
@@ -371,5 +372,6 @@ Database access provided by freely available public resources (PubMed, DrugBank,
 **License:** This search strategy documentation is published under CC-BY 4.0. Libre de partager et adapter avec attribution appropriée.
 
 **Version History:**
-- v1.0 (2025-10-21): Initial documentation accompanying manuscript submission
+- v1.1 (2025-10-21): Extended to 10 compounds spanning arrest-oscillation continuum
+- v1.0 (2025-10-21): Initial documentation accompanying manuscript submission (6 compounds)
 

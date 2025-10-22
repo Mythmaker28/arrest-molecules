@@ -51,7 +51,7 @@ The package contains:
 - Sheet 4: 95% confidence intervals
 - Sheet 5: Sensitivity analysis (varying parameters ±30%)
 
-**3. Confidence_Grading_Matrix.csv** (42 rows × 6 columns)
+**3. Confidence_Grading_Matrix.csv** (44 rows × 6 columns)
 - All quantitative predictions from manuscript
 - Evidence type (direct/indirect/extrapolated)
 - Confidence level (high/moderate/low)
@@ -215,7 +215,7 @@ The package contains:
 **v1.0 (October 2025):**
 - Initial release accompanying manuscript submission
 - 6 core arrest compounds characterized
-- 42 predictions with confidence grading
+- 44 predictions with confidence grading
 - Monte Carlo uncertainty quantification implemented
 
 **Planned updates:**
@@ -230,7 +230,7 @@ The package contains:
 ## Contact and Support
 
 **Questions:** tommy.lepesteur@hotmail.fr  
-**Issue tracking:** https://github.com/molecular-arrest-framework/issues  
+**Issue tracking:** https://github.com/Mythmaker28/arrest-molecules/issues  
 **Contributions:** Pull requests welcome for novel compound additions (requires literature sources)  
 
 **Controlled access requests** (for synthesis protocols):

@@ -1,7 +1,7 @@
 # Supplementary Material S3: Extended Case Studies
 ## Molecular Arrest Framework - Empirical Validations
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Date:** October 2025  
 **Author:** Tommy Lepesteur  
 

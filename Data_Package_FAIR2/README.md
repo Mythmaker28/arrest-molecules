@@ -1,6 +1,6 @@
 # Molecular Arrest Framework - Research Data Package
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Date:** October 2025  
 **Author:** Tommy Lepesteur (tommy.lepesteur@hotmail.fr)  
 **ORCID:** 0009-0009-0577-9563  
@@ -14,14 +14,14 @@
 This data package accompanies the manuscript "Molecular Arrest in Biological Regulation: A Unifying Framework for Natural Compounds with Dampening Effects" submitted to *Frontiers in Pharmacology*.
 
 The package contains:
-- Curated molecular properties for 6 paradigmatic arrest compounds
+- Curated molecular properties for 10 paradigmatic compounds spanning the full arrest-oscillation continuum
 - Calculated pharmacological metrics (API, EMC, NCR, AKR, PARI)
 - Uncertainty quantification via Monte Carlo simulation
-- Confidence grading for 42 quantitative predictions
+- Confidence grading for 44 quantitative predictions
 - Executable code for reproducing all calculations
 - Data dictionary and usage protocols
 
-**No new experimental data were generated.** All values are derived from published literature (85 primary sources cited in main manuscript).
+**No new experimental data were generated.** All values are derived from published literature (95+ primary sources cited in main manuscript and supplements).
 
 ---
 
@@ -29,10 +29,11 @@ The package contains:
 
 ### Core Data Tables
 
-**1. Compound_Properties_Database.csv** (6 rows × 24 columns)
+**1. Compound_Properties_Database.csv** (10 rows × 36 columns)
 - Molecular properties: formula, MW, logP, rotatable bonds, SMILES, InChI
 - Binding parameters: K_i, K_d, EC₅₀, k_off
 - Pharmacokinetics: t₁/₂, C_max, AUC, V_d, clearance, protein binding
+- **New compounds:** Ibogaine, Noribogaine (hybrid arrest), Psilocybin, LSD (arrest-oscillation continuum)
 - Literature sources: PubMed IDs for each parameter
 
 **2. API_Calculations_Full.xlsx** (multi-sheet workbook)
@@ -42,7 +43,7 @@ The package contains:
 - Sheet 4: 95% confidence intervals
 - Sheet 5: Sensitivity analysis (varying parameters ±30%)
 
-**3. Confidence_Grading_Matrix.csv** (42 rows × 6 columns)
+**3. Confidence_Grading_Matrix.csv** (44 rows × 6 columns)
 - All quantitative predictions from manuscript
 - Evidence type (direct/indirect/extrapolated)
 - Confidence level (high/moderate/low)
@@ -205,10 +206,16 @@ Standard en science computationnelle pour la reproductibilité des publications.
 
 ## Version History
 
+**v1.1 (October 2025):** ⭐ CURRENT
+- **Extended dataset:** 6 → 10 compounds (+67%)
+- **New compounds:** Ibogaine, Noribogaine (hybrid arrest), Psilocybin, LSD (oscillation)
+- Updated predictions: 42 → 44 with refined confidence grading
+- Enhanced documentation: 95+ literature sources
+
 **v1.0 (October 2025):**
 - Initial release accompanying manuscript submission
-- 6 compounds characterized
-- 42 predictions with confidence grading
+- 6 core arrest compounds characterized
+- 44 predictions with confidence grading
 - Monte Carlo uncertainty quantification implemented
 
 **Planned updates:**
@@ -222,7 +229,7 @@ Standard en science computationnelle pour la reproductibilité des publications.
 ## Contact and Support
 
 **Questions:** tommy.lepesteur@hotmail.fr  
-**Issue tracking:** https://github.com/molecular-arrest-framework/issues  
+**Issue tracking:** https://github.com/Mythmaker28/arrest-molecules/issues  
 **Contributions:** Pull requests welcome for novel compound additions (requires literature sources)  
 
 **Controlled access requests** (for synthesis protocols):
@@ -260,5 +267,6 @@ Data compilation supported by independent literature review with quality verific
 
 ## Changelog
 
-**2025-10-21:** Dataset created, v1.0 submitted with manuscript
+**2025-10-21:** Dataset v1.1 released with expanded compound set (10 compounds total)
+**2025-10-21:** Dataset v1.0 initial submission (6 compounds)
 

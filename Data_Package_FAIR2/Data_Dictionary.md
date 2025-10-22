@@ -1,6 +1,6 @@
 # Data Dictionary - Molecular Arrest Framework
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Date:** October 2025  
 **Author:** Tommy Lepesteur  
 **License:** CC-BY 4.0  
@@ -232,7 +232,8 @@ Pour questions sur le dictionnaire ou signaler erreurs, ouvrir un issue sur GitH
 
 | Version | Date | Changements |
 |---------|------|-------------|
-| 1.0 | 2025-10-21 | Version initiale accompagnant soumission manuscrit |
+| 1.1 | 2025-10-21 | Ajout 4 nouveaux composés (ibogaine, noribogaine, psilocybin, LSD), 44 prédictions |
+| 1.0 | 2025-10-21 | Version initiale accompagnant soumission manuscrit (6 composés, 42 prédictions) |
 
 ---
 
