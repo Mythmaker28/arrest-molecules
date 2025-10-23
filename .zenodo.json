@@ -1,0 +1,61 @@
+{
+  "title": "Molecular Arrest Framework - Research Data Package v1.1.0",
+  "description": "<p><strong>A unifying theoretical framework for natural compounds with dampening effects on biological regulation.</strong></p><p>This release contains:</p><ul><li>Curated data for <strong>10 paradigmatic compounds</strong> spanning the arrest-oscillation continuum</li><li>Quantitative metrics: API (Arrest Potency Index), EMC (Entropy Modulation), NCR (Network Connectivity), PARI (Resilience)</li><li><strong>44 testable predictions</strong> with confidence grading (High 41%, Moderate 30%, Low 30%)</li><li>Monte Carlo uncertainty quantification (10,000 iterations per compound, seed=42)</li><li>Fully reproducible Python code (MIT License) + R visualization scripts</li><li>95+ literature sources (all parameters traceable to PubMed IDs)</li><li>FAIR² compliant data package with complete documentation</li></ul><p><strong>Key Files:</strong></p><ul><li><code>Data_Package_FAIR2/Compound_Properties_Database.csv</code> - 10 compounds × 36 parameters</li><li><code>Data_Package_FAIR2/Confidence_Grading_Matrix.csv</code> - 44 predictions stratified</li><li><code>Data_Package_FAIR2/Python_Code_API_Monte_Carlo.py</code> - Full calculations</li><li><code>v6.txt</code> - Complete manuscript (1,943 lines)</li><li><code>README.md</code> - Comprehensive documentation</li></ul><p><strong>Reproducibility:</strong> Fixed seed Monte Carlo, explicit versions (Python 3.8+, numpy 1.24.3, pandas 2.0.3), public databases only.</p><p><strong>License:</strong> Data &amp; docs (CC-BY 4.0), Code (MIT)</p>",
+  "creators": [
+    {
+      "name": "Lepesteur, Tommy",
+      "affiliation": "Independent Researcher, Rennes, France",
+      "orcid": "0009-0009-0577-9563"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Legrand, Marie",
+      "affiliation": "Université de Rennes, France",
+      "type": "DataCurator",
+      "orcid": ""
+    }
+  ],
+  "keywords": [
+    "pharmacology",
+    "molecular arrest",
+    "dampening effects",
+    "entropy modulation",
+    "network connectivity",
+    "hormesis",
+    "psychedelics",
+    "rapamycin",
+    "salvinorin A",
+    "computational pharmacology",
+    "FAIR data",
+    "reproducible research",
+    "Monte Carlo simulation",
+    "arrest potency index",
+    "psychopharmacology"
+  ],
+  "license": {
+    "id": "CC-BY-4.0"
+  },
+  "upload_type": "dataset",
+  "access_right": "open",
+  "version": "1.1.0",
+  "publication_date": "2025-10-22",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Mythmaker28/arrest-molecules",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.17420685",
+      "relation": "isIdenticalTo",
+      "scheme": "doi"
+    }
+  ],
+  "references": [
+    "Manuscript: Lepesteur T. (2025). Molecular Arrest in Biological Regulation: A Unifying Framework for Natural Compounds with Dampening Effects. In preparation."
+  ],
+  "notes": "This dataset contains no new experimental data. All values are derived from published literature (95+ primary sources). Synthesis protocols for high-potency compounds available via controlled access (requires IRB approval). Contact: tommy.lepesteur@hotmail.fr"
+}
+

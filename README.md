@@ -1,6 +1,10 @@
 # Molecular Arrest in Biological Regulation
 
-[![License: CC-BY-4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Python](https://img.shields.io/badge/python-3.8+-blue.svg) [![DOI](https://shields.io/badge/DOI-in_progress-blue.svg)](https://zenodo.org/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17420685.svg)](https://doi.org/10.5281/zenodo.17420685)
+[![License: CC-BY-4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![Release](https://img.shields.io/github/v/release/Mythmaker28/arrest-molecules)
 
 **Framework théorique pour l'étude des composés induisant des pauses biologiques productives**
 
@@ -189,16 +193,31 @@ The package contains:
 - Clinicians exploring chronopharmacology applications
 - Educators teaching quantitative pharmacology
 
-### Recommended Citations
+### How to Cite This Work
 
 **For the dataset:**
-> Lepesteur T. Molecular Arrest Framework Research Data Package (Version 1.0) [Data set]. Zenodo. https://doi.org/[DOI-to-be-assigned] (2025)
+> Lepesteur T. (2025). Molecular Arrest Framework Research Data Package (v1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.17420685
 
 **For the manuscript:**
-> Lepesteur T. Molecular Arrest in Biological Regulation: A Unifying Framework for Natural Compounds with Dampening Effects. *Front Pharmacol* [in review] (2025)
+> Lepesteur T. Molecular Arrest in Biological Regulation: A Unifying Framework for Natural Compounds with Dampening Effects. *Manuscript in preparation* (2025)
 
 **For the code:**
-> Lepesteur T. molecular-arrest-framework: API calculation tools (v1.0). GitHub. https://github.com/Mythmaker28/arrest-molecules (2025)
+> Lepesteur T. (2025). molecular-arrest-framework: API calculation tools (v1.1.0). GitHub. https://github.com/Mythmaker28/arrest-molecules
+
+**BibTeX:**
+```bibtex
+@dataset{lepesteur2025molecular,
+  author       = {Lepesteur, Tommy},
+  title        = {Molecular Arrest Framework Research Data Package},
+  year         = 2025,
+  publisher    = {Zenodo},
+  version      = {v1.1.0},
+  doi          = {10.5281/zenodo.17420685},
+  url          = {https://doi.org/10.5281/zenodo.17420685}
+}
+```
+
+**Note:** This DOI is the **concept DOI** that always points to the latest version. For citing a specific version, use the version-specific DOI from the Zenodo record.
 
 ---
 

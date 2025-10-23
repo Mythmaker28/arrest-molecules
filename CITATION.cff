@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this dataset or framework, please cite it as below."
+type: dataset
+title: "Molecular Arrest Framework Research Data Package"
+version: "1.1.0"
+date-released: "2025-10-22"
+authors:
+  - family-names: "Lepesteur"
+    given-names: "Tommy"
+    email: "tommy.lepesteur@hotmail.fr"
+    orcid: "https://orcid.org/0009-0009-0577-9563"
+repository-code: "https://github.com/Mythmaker28/arrest-molecules"
+url: "https://github.com/Mythmaker28/arrest-molecules"
+abstract: >
+  A unifying theoretical framework for natural compounds with dampening 
+  effects on biological regulation. Includes curated data for 10 paradigmatic 
+  compounds, quantitative metrics (API, EMC, NCR, PARI), Monte Carlo 
+  uncertainty quantification, and 44 testable predictions with confidence 
+  grading. All data derived from 95+ published sources (FAIR² compliant).
+keywords:
+  - pharmacology
+  - molecular arrest
+  - dampening effects
+  - entropy modulation
+  - network connectivity
+  - hormesis
+  - psychedelics
+  - rapamycin
+  - salvinorin A
+  - computational pharmacology
+  - FAIR data
+  - reproducible research
+license: 
+  - MIT
+  - CC-BY-4.0
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.17420685"
+    description: "Zenodo archive DOI (concept DOI - always points to latest version)"
+preferred-citation:
+  type: dataset
+  title: "Molecular Arrest Framework Research Data Package"
+  authors:
+    - family-names: "Lepesteur"
+      given-names: "Tommy"
+      email: "tommy.lepesteur@hotmail.fr"
+      orcid: "https://orcid.org/0009-0009-0577-9563"
+  version: "1.1.0"
+  date-released: "2025-10-22"
+  doi: "10.5281/zenodo.17420685"
+  repository-code: "https://github.com/Mythmaker28/arrest-molecules"
+  license: 
+    - MIT
+    - CC-BY-4.0
+
