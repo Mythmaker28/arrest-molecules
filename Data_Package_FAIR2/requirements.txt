@@ -10,6 +10,7 @@ scipy==1.11.1
 
 # Visualization
 matplotlib==3.7.2
+seaborn==0.12.2  # Enhanced plotting
 
 # Statistical analysis
 statsmodels==0.14.0

@@ -38,7 +38,7 @@ API_Metrics,Tetrodotoxin API,4.0,Picomolar affinity + long residence,High,Well-c
 API_Metrics,Salvinorin A API,1.00,Reference standard normalization,Very High,Multiple studies,12202542;16847264
 API_Metrics,Paclitaxel API,0.44,High affinity slow onset,Moderate,Onset variability,8428871
 API_Metrics,Rapamycin API,0.12,High affinity very slow functional onset,Moderate,Complex PK mechanism,1909400
-API_Metrics,Capsaicin API,0.024,Moderate affinity,Moderate-High,EC50 range 400-1000 nM,9389475
+API_Metrics,Capsaicin API,0.024,Moderate affinity,Moderate,EC50 range 400-1000 nM,9389475
 API_Metrics,Resveratrol API,0.00003,Weak affinity poor PK,Low,Metabolite uncertainty,14570043
 SAR_Predictions,Salvinorin B inactivity,>10000 nM Ki,Loss of C2-acetyl critical,High,Established,12202542
 SAR_Predictions,Mesyl Sal B enhanced selectivity,0.6 nM Ki 11000x selectivity,C2 modification improves,High,Measured,Multiple

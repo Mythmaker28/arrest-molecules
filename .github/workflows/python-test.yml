@@ -27,6 +27,11 @@ jobs:
         pip install -r Data_Package_FAIR2/requirements.txt
         pip install pytest pytest-cov
     
+    - name: Validate data integrity
+      run: |
+        cd Data_Package_FAIR2
+        python data_validation.py
+    
     - name: Run smoke tests
       run: |
         cd Data_Package_FAIR2
