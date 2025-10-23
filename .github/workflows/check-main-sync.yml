@@ -64,36 +64,14 @@ jobs:
           
           // Ne créer un issue que s'il n'en existe pas déjà un
           if (issues.length === 0) {
+            const latest = '${{ steps.check.outputs.latest }}';
+            const current = '${{ steps.check.outputs.current }}';
+            
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: '⚠️ Main branch is behind latest release',
-              body: `## Synchronization Warning
-              
-**Latest release:** ${{ steps.check.outputs.latest }}  
-**Main branch VERSION:** ${{ steps.check.outputs.current }}
-
-### Actions Required
-
-The main branch needs to be synchronized with the latest release:
-
-\`\`\`bash
-git checkout main
-git merge --ff-only ${{ steps.check.outputs.latest }}
-git push origin main
-\`\`\`
-
-Or if you made changes on main after the release:
-
-\`\`\`bash
-# Update VERSION file
-echo "${{ steps.check.outputs.latest }}" | sed 's/v//' > VERSION
-git add VERSION
-git commit -m "chore: sync VERSION with latest release"
-git push origin main
-\`\`\`
-
-This issue will auto-close when main is synchronized.`,
+              body: `## Synchronization Warning\n\n**Latest release:** ${latest}\n**Main branch VERSION:** ${current}\n\n### Actions Required\n\nThe main branch needs to be synchronized with the latest release:\n\n\`\`\`bash\ngit checkout main\ngit merge --ff-only ${latest}\ngit push origin main\n\`\`\`\n\nOr update VERSION file:\n\n\`\`\`bash\necho "${latest}" | sed 's/v//' > VERSION\ngit add VERSION\ngit commit -m "chore: sync VERSION with latest release"\ngit push origin main\n\`\`\`\n\nThis issue will auto-close when synchronized.`,
               labels: ['sync-warning', 'automation']
             });
           }
