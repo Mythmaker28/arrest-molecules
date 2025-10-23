@@ -1,0 +1,10 @@
+﻿
+Hash                                                             File                            
+----                                                             ----                            
+35F25E1ACDA2924EE97B3ED73178A922277D0D2E2839FFAEF52ADDD142FBF6BA Compound_Properties_Database.csv
+A8CE1E41BDC6CB42AD7ACCE5E2D477C24D495A2D3CB629D2014AC7AEB012325D API_Calculations_Full.xlsx      
+F7EE3F826790EEAD387B74C0C0E53AC6CDAFB8C5D7EA9FA47AB3390F7457C38B Python_Code_API_Monte_Carlo.py  
+EB4AE655AFB3C684F898258204E70C567A1E53B159D1DE4FAA3AEB615CBF27C2 R_Code_Figures_S2.R             
+1F39D5E5CCC3006795C18AA620C0E21EA961733C2E1FDBFEC5B917FB4A044384 Confidence_Grading_Matrix.csv   
+
+

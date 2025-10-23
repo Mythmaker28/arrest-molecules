@@ -10,16 +10,16 @@
 
 **Framework théorique pour l'étude des composés induisant des pauses biologiques productives**
 
-> 📢 **Version actuelle : v1.1.0** | [📥 Télécharger la dernière release](https://github.com/Mythmaker28/arrest-molecules/releases/latest) | [📖 Notes de version](https://github.com/Mythmaker28/arrest-molecules/releases/tag/v1.1.0)
+> 📢 **Version actuelle : v1.1.1** | [📥 Télécharger la dernière release](https://github.com/Mythmaker28/arrest-molecules/releases/latest) | [📖 Notes de version](https://github.com/Mythmaker28/arrest-molecules/releases/tag/v1.1.1)
 
 ---
 
-**Version:** 1.1.0 ⭐  
+**Version:** 1.1.1 (Reproducibility Patch) ⭐  
 **Date:** October 2025  
 **Author:** Tommy Lepesteur (tommy.lepesteur@hotmail.fr)  
-**ORCID:** 0009-0009-0577-9563
+**ORCID:** 0009-0009-0577-9563  
 **License:** CC-BY 4.0 (data), MIT License (code)  
-**DOI:** [To be assigned by Zenodo upon publication]  
+**DOI:** 10.5281/zenodo.17420685  
 **Repository:** https://github.com/Mythmaker28/arrest-molecules  
 
 ---
@@ -246,7 +246,15 @@ python Python_Code_API_Monte_Carlo.py --all
 
 ## Version History
 
-**v1.1 (October 2025):** ⭐ CURRENT
+**v1.1.1 (October 2025):** ⭐ CURRENT (Reproducibility Patch)
+- ✅ Quick check script for instant validation (< 1s)
+- ✅ Full CI/CD reproducibility workflow
+- ✅ Automated artifact verification
+- ✅ SHA256 checksums for all assets
+- ✅ DOI Zenodo integrated everywhere
+- ✅ 1-click reproducibility guaranteed (< 3 min)
+
+**v1.1.0 (October 2025):**
 - **Extended dataset:** 6 → 10 compounds (+67%)
 - **New compounds:** Ibogaine, Noribogaine (hybrid arrest), Psilocybin, LSD (oscillation)
 - **Case studies supplement:** 5 detailed case studies spanning arrest-oscillation continuum

@@ -1,25 +1,52 @@
-name: Python Tests
+name: Reproducibility CI
 
 on:
   push:
     branches: [ main, develop ]
   pull_request:
     branches: [ main, develop ]
+  release:
+    types: [published]
 
 jobs:
-  test:
+  check-artifacts:
+    name: Check Critical Artifacts
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ['3.11']  # Simple : une seule version pour commencer
-
     steps:
     - uses: actions/checkout@v4
     
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Verify critical files presence
+      run: |
+        MISSING=0
+        for file in \
+          Data_Package_FAIR2/Compound_Properties_Database.csv \
+          Data_Package_FAIR2/API_Calculations_Full.xlsx \
+          Data_Package_FAIR2/Python_Code_API_Monte_Carlo.py \
+          Data_Package_FAIR2/R_Code_Figures_S2.R; do
+          if [ ! -f "$file" ]; then
+            echo "❌ MISSING: $file"
+            MISSING=$((MISSING + 1))
+          else
+            echo "✅ OK: $file"
+          fi
+        done
+        if [ $MISSING -gt 0 ]; then
+          echo "::error::$MISSING critical files missing"
+          exit 1
+        fi
+
+  test-reproducibility:
+    name: Test 1-Click Reproducibility
+    runs-on: ubuntu-latest
+    needs: check-artifacts
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python 3.11
       uses: actions/setup-python@v4
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: '3.11'
     
     - name: Install dependencies
       run: |
@@ -32,13 +59,31 @@ jobs:
         cd Data_Package_FAIR2
         python data_validation.py
     
-    - name: Run smoke tests
+    - name: Quick Check API values
+      timeout-minutes: 2
       run: |
         cd Data_Package_FAIR2
-        python -m pytest test_api_calculations.py -v --tb=short
+        python quickcheck_api.py
     
-    - name: Test Python script execution
+    - name: Run full API calculation (< 60s)
+      timeout-minutes: 2
       run: |
         cd Data_Package_FAIR2
-        python Python_Code_API_Monte_Carlo.py --help || echo "Script runs OK"
+        mkdir -p output
+        python Python_Code_API_Monte_Carlo.py --all
+    
+    - name: Run unit tests
+      run: |
+        cd Data_Package_FAIR2
+        python -m pytest test_api_calculations.py -v --tb=short --cov=. --cov-report=term
+    
+    - name: Upload test outputs
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-outputs
+        path: |
+          Data_Package_FAIR2/output/
+          Data_Package_FAIR2/*.png
+        retention-days: 30
 
