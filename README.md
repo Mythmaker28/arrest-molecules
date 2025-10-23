@@ -1,16 +1,20 @@
 # Molecular Arrest in Biological Regulation
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17420685.svg)](https://doi.org/10.5281/zenodo.17420685)
+[![Latest Release](https://img.shields.io/github/v/release/Mythmaker28/arrest-molecules?label=Latest%20Release&color=success)](https://github.com/Mythmaker28/arrest-molecules/releases/latest)
+[![GitHub Release Date](https://img.shields.io/github/release-date/Mythmaker28/arrest-molecules)](https://github.com/Mythmaker28/arrest-molecules/releases)
 [![License: CC-BY-4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![Release](https://img.shields.io/github/v/release/Mythmaker28/arrest-molecules)
+[![CI Tests](https://img.shields.io/github/actions/workflow/status/Mythmaker28/arrest-molecules/python-test.yml?branch=main&label=tests)](https://github.com/Mythmaker28/arrest-molecules/actions)
 
 **Framework théorique pour l'étude des composés induisant des pauses biologiques productives**
 
+> 📢 **Version actuelle : v1.1.0** | [📥 Télécharger la dernière release](https://github.com/Mythmaker28/arrest-molecules/releases/latest) | [📖 Notes de version](https://github.com/Mythmaker28/arrest-molecules/releases/tag/v1.1.0)
+
 ---
 
-**Version:** 1.1 ⭐  
+**Version:** 1.1.0 ⭐  
 **Date:** October 2025  
 **Author:** Tommy Lepesteur (tommy.lepesteur@hotmail.fr)  
 **ORCID:** 0009-0009-0577-9563
