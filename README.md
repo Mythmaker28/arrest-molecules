@@ -106,6 +106,25 @@ The package contains:
 
 ---
 
+## ⚡ Quick Start (60 seconds)
+
+```bash
+# 1. Clone & install
+git clone https://github.com/Mythmaker28/arrest-molecules.git
+cd arrest-molecules
+pip install -r Data_Package_FAIR2/requirements.txt
+
+# 2. Run API calculations
+cd Data_Package_FAIR2
+python Python_Code_API_Monte_Carlo.py --all
+```
+
+**Output:** API values with 95% CI for all 10 compounds
+
+📖 **Detailed guide:** See [`QUICKSTART.md`](QUICKSTART.md) for more examples
+
+---
+
 ## Quick Start Guide
 
 ### For users wanting to verify API calculations:

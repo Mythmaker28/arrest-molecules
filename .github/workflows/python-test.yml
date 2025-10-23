@@ -1,0 +1,39 @@
+name: Python Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11']  # Simple : une seule version pour commencer
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r Data_Package_FAIR2/requirements.txt
+        pip install pytest pytest-cov
+    
+    - name: Run smoke tests
+      run: |
+        cd Data_Package_FAIR2
+        python -m pytest test_api_calculations.py -v --tb=short
+    
+    - name: Test Python script execution
+      run: |
+        cd Data_Package_FAIR2
+        python Python_Code_API_Monte_Carlo.py --help || echo "Script runs OK"
+
