@@ -2,10 +2,22 @@
 
 ## Installation & Exécution
 
-### 1. Cloner le projet
+### Option A : Depuis la Dernière Release (Recommandé)
+
+```bash
+# Télécharger directement les assets de la dernière release
+wget https://github.com/Mythmaker28/arrest-molecules/releases/latest/download/arrest-molecules-latest.zip
+unzip arrest-molecules-latest.zip
+cd arrest-molecules
+pip install -r Data_Package_FAIR2/requirements.txt
+```
+
+### Option B : Cloner le Repo Complet
+
 ```bash
 git clone https://github.com/Mythmaker28/arrest-molecules.git
 cd arrest-molecules
+pip install -r Data_Package_FAIR2/requirements.txt
 ```
 
 ### 2. Installer les dépendances

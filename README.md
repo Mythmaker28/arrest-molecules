@@ -14,13 +14,18 @@
 
 ---
 
-**Version:** 1.1.1 (Reproducibility Patch) ⭐  
-**Date:** October 2025  
+<!--VERSION-START-->
+**Version actuelle (latest):** v1.1.1 ⭐  
+**Date de release :** 23 October 2025  
+**DOI Zenodo :** 10.5281/zenodo.17420685  
+<!--VERSION-END-->
+
 **Author:** Tommy Lepesteur (tommy.lepesteur@hotmail.fr)  
 **ORCID:** 0009-0009-0577-9563  
 **License:** CC-BY 4.0 (data), MIT License (code)  
-**DOI:** 10.5281/zenodo.17420685  
-**Repository:** https://github.com/Mythmaker28/arrest-molecules  
+**Repository:** https://github.com/Mythmaker28/arrest-molecules
+
+> ℹ️ **Cette page pointe toujours vers les assets de la dernière release.** Les liens ci-dessous se mettent à jour automatiquement.  
 
 ---
 
