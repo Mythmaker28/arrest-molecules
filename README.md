@@ -20,7 +20,7 @@
 **DOI Zenodo :** 10.5281/zenodo.17420685  
 <!--VERSION-END-->
 
-**Author:** Tommy Lepesteur (tommy.lepesteur@hotmail.fr)  
+**Author:** Tommy Lepesteur  
 **ORCID:** 0009-0009-0577-9563  
 **License:** CC-BY 4.0 (data), MIT License (code)  
 **Repository:** https://github.com/Mythmaker28/arrest-molecules
