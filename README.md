@@ -121,16 +121,22 @@ The package contains:
 # 1. Clone & install
 git clone https://github.com/Mythmaker28/arrest-molecules.git
 cd arrest-molecules
-pip install -r Data_Package_FAIR2/requirements.txt
+python -m venv .venv
 
-# 2. Run API calculations
-cd Data_Package_FAIR2
-python Python_Code_API_Monte_Carlo.py --all
+# 2. Activate environment
+# Windows: .venv\Scripts\activate
+# Linux/Mac: source .venv/bin/activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run reproducibility pipeline
+python run_arrest_pipeline.py
 ```
 
-**Output:** API values with 95% CI for all 10 compounds
+**Output:** Validates data files, creates `outputs/` directory, and runs analysis scripts if available.
 
-📖 **Detailed guide:** See [`QUICKSTART.md`](QUICKSTART.md) for more examples
+📖 **Detailed guide:** See [`QUICKSTART.md`](QUICKSTART.md) and [`DOCS/REPRO_STATUS.md`](DOCS/REPRO_STATUS.md)
 
 ---
 

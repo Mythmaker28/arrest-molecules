@@ -44,3 +44,7 @@ _notes_personnelles/
 
 # Excel temporaires
 ~$*.xlsx
+
+outputs/
+figures/*.png
+.venv/
