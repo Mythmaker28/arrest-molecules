@@ -56,6 +56,7 @@ This data package accompanies the manuscript "Molecular Arrest in Biological Reg
 The package contains:
 - **Core validated dataset:** 10 exemplar compounds with complete data: 8 arrest agents (salvinorin A, paclitaxel, rapamycin, capsaicin, tetrodotoxin, resveratrol, ibogaine, noribogaine) + 2 oscillatory controls (psilocybin, LSD)
 - **🆕 Extended experimental dataset (v1.2):** 9 additional compounds with partial data: nalfurafine, everolimus, temsirolimus, muscimol, diazepam, propofol, adenosine, curcumin, quercetin
+- **🆕 Data Quality Framework:** Explicit Tier A/B/C/D classification with completeness metrics (see `Data_Package_FAIR2/DATA_QUALITY_OVERVIEW.md`)
 - **Proposed** pharmacological metrics (API, EMC, NCR, AKR, PARI) — *indices requiring empirical validation*
 - Uncertainty quantification via Monte Carlo simulation
 - Confidence grading for 44 quantitative predictions (41% high confidence, 30% moderate, 30% low)
@@ -65,10 +66,10 @@ The package contains:
 
 **⚠️ LIMITATIONS:**
 - **No new experimental data were generated.** All values are literature-derived (95+ sources).
-- **Core dataset:** 10 compounds (validated) — conclusions remain tentative
-- **Extended dataset (v1.2-experimental):** 9 compounds with partial/estimated data (71% completeness) — exploratory only
+- **Core dataset:** 10 compounds (validated, Tier A/B) — conclusions remain tentative
+- **Extended dataset (v1.2-experimental):** 9 compounds with partial/estimated data (Tier B/C/D: 50-90% completeness) — exploratory only
 - **Metrics are proposed, not validated:** API, EMC, NCR, AKR, PARI require prospective testing.
-- **Many predictions are low-to-moderate confidence:** See `Confidence_Grading_Matrix.csv` for details.
+- **Many predictions are low-to-moderate confidence:** See `Confidence_Grading_Matrix.csv` and `DATA_QUALITY_OVERVIEW.md` for details.
 
 ---
 
@@ -88,10 +89,17 @@ The package contains:
 - **Same structure as core dataset** but with partial/incomplete data
 - **Compounds:** Nalfurafine, Everolimus, Temsirolimus, Muscimol, Diazepam, Propofol, Adenosine, Curcumin, Quercetin
 - **Purpose:** Exploratory data collection, SAR validation, candidate evaluation for future promotion to core dataset
-- **Completeness:** ~71% (many NR/EST/NA placeholders)
-- **Confidence:** 33% HIGH+, 67% MODERATE-LOW
+- **Data Quality:** Tier B (1), Tier C (5), Tier D (2) — see `DATA_QUALITY_OVERVIEW.md` for detailed assessment
+- **Completeness:** 50-90% depending on compound (many NR/EST/NA placeholders)
+- **Confidence:** 1 HIGH, 2 MODERATE-HIGH, 4 MODERATE, 2 LOW
 - **Caution:** ⚠️ This file contains preliminary data. Do NOT use for definitive conclusions without additional validation.
-- See `Data_Package_FAIR2/CANDIDATE_MOLECULES_TODO.md` for data gaps and priorities
+- See `Data_Package_FAIR2/CANDIDATE_MOLECULES_TODO.md` for data gaps and `DATA_QUALITY_OVERVIEW.md` for tier justifications
+
+**1.2 DATA_QUALITY_OVERVIEW.md** 🆕 Quality Framework (v1.2)
+- Explicit Tier A/B/C/D classification for all 19 compounds
+- Completeness metrics and confidence justifications
+- Usage guidelines (which tiers suitable for what analyses)
+- Roadmap for compound promotion (e.g., "Diazepam 1 study away from Tier A")
 
 **2. API_Calculations_Full.xlsx** (multi-sheet workbook)
 - Sheet 1: Input parameters with literature sources
