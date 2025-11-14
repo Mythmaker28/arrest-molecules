@@ -21,9 +21,10 @@
 ### Tier A – Core, High Completeness (≥90% key parameters, strong literature)
 
 #### 1. Salvinorin A [CORE]
-**Confidence:** VERY HIGH  
+**Pharmacology confidence (KOR):** VERY HIGH  
+**Arrest/network confidence:** MODERATE-HIGH (imaging present but limited)  
 **Completeness:** 95%+  
-**Justification:** Complete binding (Ki/Kd + PMID 12202542), kinetics (k_off), full PK (t_half, Cmax, AUC, Vd, Clearance), EC50 with assay type, EMC/NCR/PARI from literature. Reference standard for API calculations (relative = 1.00).
+**Justification:** Tier A pharmacology (potent, selective full KOR agonist; multiple human/animal studies). The “Level 3 arrest” classification remains more speculative: current evidence includes a small set of neuroimaging studies (human/primate fMRI, baboon PET) indicating DMN attenuation and rapid brain kinetics, but not a large, systematic imaging program. Salvinorin A remains the reference standard for API normalization (relative = 1.00).
 
 #### 2. Paclitaxel [CORE]
 **Confidence:** HIGH  
@@ -182,6 +183,33 @@
 
 ---
 
+## Oscillatory / Psychedelic Comparators (NOT Arrest Molecules)
+
+### Purpose
+Classical serotonergic psychedelics (psilocybin, LSD, ayahuasca/DMT) are included in this framework as **oscillatory comparators**, NOT as arrest molecules. They provide a high-entropy contrast to the putative arrest agents.
+
+### Psilocybin [CORE]
+**Pharmacology confidence:** HIGH  
+**Network confidence:** HIGH  
+**Role:** Oscillatory comparator (5-HT2A agonist)  
+**Justification:** Well-characterized 5-HT2A binding, extensive neuroimaging showing DMN disruption + increased network entropy (EMC +0.52, NCR -28%). FDA Breakthrough designation. **Not an arrest molecule.**
+
+### LSD [CORE]
+**Pharmacology confidence:** MODERATE-HIGH  
+**Network confidence:** HIGH  
+**Role:** Oscillatory comparator (5-HT2A agonist)  
+**Justification:** Strong 5-HT2A binding/kinetics, long residence time (303 min), robust neuroimaging evidence of increased entropy (EMC +0.58, NCR -32%). **Not an arrest molecule.**
+
+### Ayahuasca / DMT [NOT INCLUDED AS DATA ROWS]
+**Pharmacology confidence (if added):** MODERATE (complex brew, variable composition; core mechanism via DMT + β-carbolines well-supported)  
+**Network confidence (if added):** HIGH (multiple fMRI studies: DMN attenuation, salience network–DMN coupling, increased signal diversity/entropy)  
+**Role:** Would serve as oscillatory comparator, similar to psilocybin/LSD  
+**Justification:** DMT (5-HT2A agonist) + harmine/harmaline (MAO-A inhibitors) produce high-entropy states. Neuroimaging consistently shows network disintegration, increased global connectivity, and entropic brain states (Timmermann et al., Pasquini et al.). **Not an arrest molecule.** Currently not included as data rows; mentioned here for conceptual clarity to avoid future confusion.
+
+**Key distinction:** Arrest molecules (Level 1–3) are hypothesized to *reduce* entropy and network connectivity (EMC < 0, NCR > 0). Psychedelics do the opposite: they *increase* entropy and disrupt hierarchical network organization (EMC > 0, NCR < 0).
+
+---
+
 ## Validation Status
 
 **Scripts executed:** November 14, 2025
@@ -191,7 +219,7 @@ python data_validation.py    → ✅ PASS (core 10 compounds)
 python quickcheck_api.py      → ✅ PASS (API calculations correct)
 ```
 
-**Conclusion:** Core dataset integrity maintained. Extended dataset acknowledged as exploratory with documented gaps.
+**Conclusion:** Core dataset integrity maintained. Extended dataset acknowledged as exploratory with documented gaps. Oscillatory comparators (psilocybin, LSD) clearly separated from arrest molecules.
 
 ---
 

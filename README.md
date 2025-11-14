@@ -69,6 +69,8 @@ The package contains:
 - **Core dataset:** 10 compounds (validated, Tier A/B) — conclusions remain tentative
 - **Extended dataset (v1.2-experimental):** 9 compounds with partial/estimated data (Tier B/C/D: 50-90% completeness) — exploratory only
 - **Metrics are proposed, not validated:** API, EMC, NCR, AKR, PARI require prospective testing.
+- **Specific nuance for Salvinorin A:** KOR pharmacology evidence is VERY HIGH, but the Level 3 arrest classification is a hypothesis; imaging evidence (fMRI/PET) exists in humans/primates yet remains limited to a few small studies, not a large, systematic program.
+- **Psychedelic comparators (psilocybin, LSD, ayahuasca/DMT):** These are oscillatory/high-entropy comparators, NOT arrest molecules. They disrupt DMN connectivity and increase network entropy (EMC > 0), providing a contrast to the arrest candidates (EMC < 0).
 - **Many predictions are low-to-moderate confidence:** See `Confidence_Grading_Matrix.csv` and `DATA_QUALITY_OVERVIEW.md` for details.
 
 ---
