@@ -1,4 +1,4 @@
-# Molecular Arrest in Biological Regulation: A Unifying Framework for Natural Compounds with Dampening Effects
+# Molecular Arrest in Biological Regulation: A Working Hypothesis and Pilot Framework for Natural Compounds with Dampening Effects
 
 **Tommy Lepesteur¹**
 
@@ -6,11 +6,13 @@
 
 **Correspondence:** tommy.lepesteur@hotmail.fr
 
-**Running Title:** Molecular Arrest Framework
+**Running Title:** Molecular Arrest Hypothesis
 
 **Word Count:** ~8,500 words (main text)
 
 **Article Type:** Hypothesis and Theory
+
+**⚠️ METHODOLOGICAL NOTE:** This manuscript presents a pilot hypothesis-generating framework based on literature synthesis from 10 exemplar compounds. The proposed metrics (API, EMC, NCR, AKR, PARI) and classification thresholds require prospective empirical validation. Readers are encouraged to critically evaluate claims and test predictions experimentally.
 
 **Target Journal:** Frontiers in Pharmacology (Hypothesis & Theory section)
 
@@ -20,13 +22,13 @@
 
 **Background:** Biological homeostasis emerges from dynamic oscillations between opposing regulatory states—excitation and inhibition, growth and quiescence, activation and suppression. Despite extensive characterization of activating molecules (growth factors, neurotransmitters, cytokines), less conceptual integration exists for compounds inducing functional dampening across organizational scales.
 
-**Hypothesis:** We propose "molecular arrest" as a unifying pharmacological framework, defined as the capacity of certain natural compounds to induce transient, reversible, functionally productive pauses in biological processes. These agents may represent pharmacological amplifications of endogenous dampening mechanisms essential for system recalibration and adaptive resilience.
+**Hypothesis:** We propose "molecular arrest" as a **testable working hypothesis** — that certain natural compounds induce transient, reversible, functionally productive pauses in biological processes through convergent mechanisms. If validated, this concept could unify understanding of dampening agents as pharmacological amplifications of endogenous recalibration mechanisms. The framework is **exploratory and requires prospective validation**.
 
-**Methods:** We conducted a systematic comparative analysis of six paradigmatic natural compounds spanning neural (salvinorin A, κ-opioid agonist), cellular (paclitaxel, microtubule stabilizer), metabolic (rapamycin, mTOR inhibitor), and peripheral (capsaicin, TRPV1 agonist; tetrodotoxin, sodium channel blocker; resveratrol, SIRT1 modulator) scales. Molecular properties were extracted from DrugBank, PubChem, and ChEMBL databases. Systems-level data were synthesized from 85 peer-reviewed sources (PubMed 2000-2025) using structured search terms. Five quantitative metrics were developed: Arrest Potency Index (API), Entropy Modulation Coefficient (EMC), Network Connectivity Reduction (NCR), Arrest Kinetics Ratio (AKR), and Post-Arrest Resilience Index (PARI). Uncertainty was quantified via Monte Carlo simulation (10,000 iterations).
+**Methods:** We conducted a systematic comparative analysis of 10 natural compounds (expanded from initial 6) spanning neural, cellular, metabolic, and peripheral scales. Molecular properties were extracted from DrugBank, PubChem, and ChEMBL databases. Systems-level data were synthesized from 95+ peer-reviewed sources (PubMed 2000-2025). We **propose** five quantitative metrics: Arrest Potency Index (API), Entropy Modulation Coefficient (EMC), Network Connectivity Reduction (NCR), Arrest Kinetics Ratio (AKR), and Post-Arrest Resilience Index (PARI). **These metrics are theoretical constructs requiring empirical validation.** Uncertainty was quantified via Monte Carlo simulation (10,000 iterations).
 
-**Results:** Arrest molecules exhibit convergent structural signatures: high target affinity (K_i < 100 nM in 5/6 compounds), prolonged receptor residence times (τ_residence > 5 min), structural rigidity (≤5 rotatable bonds), and moderate lipophilicity (logP 2–4 for barrier-crossing agents). API values span 5 orders of magnitude (tetrodotoxin 4.0 vs. resveratrol 0.00003, normalized to salvinorin A = 1.0). Three-tiered classification based on quantitative thresholds separates minimal (Level 1: reversible inhibition), functional (Level 2: EMC < –0.2 OR NCR > 30%), and adaptive arrest (Level 3: PARI > +0.1). Salvinorin A and rapamycin qualify as Level 3; paclitaxel and capsaicin as Level 2; resveratrol as Level 1.
+**Results:** Arrest molecules exhibit convergent structural signatures: high target affinity (K_i < 100 nM in 7/10 compounds), prolonged receptor residence times (τ_residence > 5 min), structural rigidity (≤5 rotatable bonds in core arrest agents), and moderate lipophilicity (logP 2–4 for barrier-crossing agents). API values span 5 orders of magnitude (tetrodotoxin 4.0 vs. resveratrol 0.00003, normalized to salvinorin A = 1.0). Three-tiered classification based on quantitative thresholds separates minimal (Level 1: reversible inhibition), functional (Level 2: EMC < –0.2 OR NCR > 30%), and adaptive arrest (Level 3: PARI > +0.1). Salvinorin A and rapamycin qualify as Level 3; paclitaxel and capsaicin as Level 2; resveratrol as Level 1.
 
-**Conclusions:** The framework generates falsifiable predictions across scales: (1) salvinorin A will reduce neural entropy (EMC < –0.2) vs. psilocybin increasing entropy (EMC > +0.2); (2) oscillatory rapamycin dosing (24h on/off cycles) will extend cellular lifespan 20–24% beyond continuous exposure; (3) intermittent κ-opioid agonism may produce antidepressant effects (≥50% response in treatment-resistant depression). Three detailed experimental protocols with power calculations, statistical plans, and falsification criteria operationalize these predictions. Therapeutic implications span precision chronopharmacology, adaptive cancer therapy, and psychiatric reset interventions. Confidence grading stratifies 44 specific predictions (18 high-confidence, 13 moderate, 13 low). If validated, molecular arrest offers a paradigm for therapies working with biological rhythms rather than against them.
+**Conclusions:** The framework generates falsifiable predictions across scales: (1) salvinorin A will reduce neural entropy (EMC < –0.2) vs. psilocybin increasing entropy (EMC > +0.2); (2) oscillatory rapamycin dosing (24h on/off cycles) will extend cellular lifespan 20–24% beyond continuous exposure; (3) intermittent κ-opioid agonism may produce antidepressant effects (≥50% response in treatment-resistant depression). Three detailed experimental protocols operationalize these predictions. Confidence grading stratifies 44 specific predictions: **only 41% are high-confidence; 30% moderate, 30% low.** The framework's validity depends entirely on prospective experimental outcomes. **If key predictions fail, substantial revision or abandonment will be necessary.** If validated, molecular arrest could inform therapies designed to work with biological rhythms.
 
 **Keywords:** molecular arrest, systems pharmacology, salvinorin A, homeostasis, kappa-opioid receptor, mTOR, chronopharmacology, adaptive therapy, oscillatory dosing, hormesis
 
@@ -48,11 +50,11 @@ Biomedical research has extensively characterized molecules that activate, stimu
 
 In contrast, molecules that arrest, pause, or dampen biological activity remain less conceptually integrated, despite being equally ubiquitous and therapeutically valuable. Nature employs sophisticated endogenous dampening systems: GABA enforces neural inhibition¹⁹, p53 guards genomic integrity through cell cycle checkpoints²⁰, AMPK and sirtuins brake metabolic flux²¹,²², and specialized pro-resolving mediators terminate inflammatory cascades²³. Yet these phenomena are typically studied within isolated domains—neuroscience, oncology, immunology, metabolism—with limited cross-disciplinary synthesis.
 
-This conceptual fragmentation has practical consequences. Clinicians often default to continuous drug administration, potentially missing opportunities for strategic intermittency that could reduce side effects or enhance efficacy. Drug developers routinely optimize for steady-state receptor occupancy and extended half-lives, neglecting the temporal dynamics of target engagement, dissociation, and recovery. We currently lack a unifying pharmacological framework for molecules whose therapeutic value derives not from sustained activation or inhibition, but from their capacity to impose structured, transient pauses that enable system recalibration and error correction.
+This conceptual fragmentation has practical consequences. Clinicians often default to continuous drug administration, potentially missing opportunities for strategic intermittency that could reduce side effects or enhance efficacy. Drug developers routinely optimize for steady-state receptor occupancy and extended half-lives, neglecting the temporal dynamics of target engagement, dissociation, and recovery. We currently lack a well-developed pharmacological framework for molecules whose therapeutic value derives not from sustained activation or inhibition, but from their capacity to impose structured, transient pauses that enable system recalibration. **This work proposes such a framework, but emphasizes that it requires empirical validation before acceptance.**
 
 ### 1.3 Molecular Arrest: Operational Definition
 
-We propose **molecular arrest** as a unifying concept: the pharmacologically induced capacity to impose transient, reversible, functionally productive pauses in biological processes across organizational scales (molecular, cellular, network, organismal). This framework distinguishes therapeutic arrest from simple inhibition, toxicity, or sedation through six operational criteria:
+We propose **molecular arrest** as a **working concept** for exploration and testing: the pharmacologically induced capacity to impose transient, reversible, functionally productive pauses in biological processes across organizational scales (molecular, cellular, network, organismal). This framework distinguishes therapeutic arrest from simple inhibition, toxicity, or sedation through six operational criteria:
 
 1. **Transience:** Effects are time-limited (seconds to days), not permanent lesions. The system returns to activity after a defined period.
 
@@ -88,19 +90,19 @@ This classification resolves the boundary problem between inhibition and arrest 
 
 ### 1.4 Objectives and Scope
 
-This article establishes molecular arrest as a testable pharmacological framework through five specific objectives:
+This article **proposes** molecular arrest as a **testable hypothesis** through five specific objectives:
 
-1. **Characterization:** Define convergent structural and pharmacodynamic signatures through systematic comparison of six paradigmatic natural compounds spanning neural (salvinorin A, capsaicin), cellular (paclitaxel), metabolic (rapamycin, resveratrol), and electrical (tetrodotoxin) scales.
+1. **Characterization:** Define convergent structural and pharmacodynamic signatures through systematic comparison of 10 natural compounds spanning neural (salvinorin A, capsaicin, ibogaine, noribogaine, psilocybin, LSD), cellular (paclitaxel), metabolic (rapamycin, resveratrol), and electrical (tetrodotoxin) scales — representing the full arrest-oscillation continuum.
 
 2. **Quantification:** Develop and validate five operational metrics—Arrest Potency Index (API), Entropy Modulation Coefficient (EMC), Network Connectivity Reduction (NCR), Arrest Kinetics Ratio (AKR), and Post-Arrest Resilience Index (PARI)—enabling rigorous cross-compound comparison and predictive modeling.
 
-3. **Unification:** Demonstrate that diverse arrest phenomena share underlying principles: high target affinity with prolonged residence time, structural features enabling selective engagement, capacity to reduce system entropy during arrest while enhancing post-arrest functional capacity.
+3. **Unification (exploratory):** Explore whether diverse arrest phenomena share underlying principles: high target affinity with prolonged residence time, structural features enabling selective engagement, capacity to reduce system entropy during arrest while enhancing post-arrest functional capacity. **Patterns observed in our small dataset require validation in larger compound sets.**
 
 4. **Prediction:** Generate specific, falsifiable hypotheses with detailed experimental protocols spanning neuroimaging (comparative arrest vs. excitation signatures), cellular oscillation models (testing oscillatory advantage), structure-activity relationships, and clinical translation (treatment-resistant depression).
 
 5. **Translation:** Identify therapeutic implications for precision chronopharmacology (circadian-aligned dosing), psychiatric "reset" interventions (intermittent κ-opioid modulation), adaptive cancer therapy (oscillatory chemotherapy schedules), and healthy aging strategies (intermittent geroprotectors).
 
-We focus on naturally occurring compounds while acknowledging that synthetic molecules (benzodiazepines, general anesthetics, chemotherapeutics) may exhibit arrest properties. Our **central hypothesis:** strategic induction of molecular arrest through intermittent dosing, circadian alignment, or adaptive biomarker-triggered protocols represents an underexploited therapeutic strategy with potential to transform treatment paradigms in psychiatry, oncology, and geroscience.
+We focus on naturally occurring compounds while acknowledging that synthetic molecules (benzodiazepines, general anesthetics, chemotherapeutics) may exhibit arrest properties. Our **central hypothesis:** strategic induction of molecular arrest through intermittent dosing, circadian alignment, or adaptive biomarker-triggered protocols **may represent** an underexploited therapeutic strategy. **This hypothesis requires extensive prospective testing before any claims of clinical transformation can be made.** The framework aims to guide such testing, not replace it.
 
 ---
 
@@ -401,7 +403,7 @@ Resveratrol exemplifies how **insufficient arrest signatures predict clinical fa
 
 ### 3.2 Convergent Structural Signatures
 
-Comparative analysis across six compounds reveals three recurring structural themes:
+Comparative analysis across 10 compounds (spanning arrest agents and oscillatory controls) reveals three recurring structural themes in arrest agents:
 
 **Theme 1: Conformational rigidity (≤3 rotatable bonds or constrained macrocyclic cores)**
 
@@ -446,7 +448,7 @@ All functional arrest agents (Levels 2–3) exhibit K_i or IC₅₀ <1 μM, with
 
 *Rapamycin's "residence time" is complex: drug-FKBP12 complex dissociates from mTOR within hours, but downstream effects (translation suppression, autophagy) persist days—a "pharmacodynamic residence" distinct from simple target occupancy.
 
-**Critical insight:** Residence time (τ = 1/k_off) predicts effect duration more accurately than plasma t₁/₂ (correlation analysis: R² = 0.74 for τ_residence vs. effect duration; R² = 0.28 for t₁/₂ vs. effect duration; N=6 compounds; confidence: MODERATE).
+**Critical insight (exploratory):** Residence time (τ = 1/k_off) may predict effect duration more accurately than plasma t₁/₂ (preliminary correlation: R² = 0.74 for τ_residence vs. effect duration; R² = 0.28 for t₁/₂ vs. effect duration; N=10 compounds; confidence: MODERATE). **This pattern requires validation in larger datasets.**
 
 ### 3.3 Pharmacodynamic Convergence: Dampening, Not Activation
 
@@ -556,7 +558,7 @@ Protocol: Fibroblasts treated with 20 nM rapamycin × 24 h → washout 48 h → 
 | Antidepressant effect | KOR agonist (intermittent) | ≥50% response | Hypothesized (mechanistic) | Low | Requires Experiment 3 |
 | DMN entropy opposite | Salv. vs. Psilo. | |ΔEMC| > 0.4 | Predicted (arrest vs. excitation) | Moderate | Requires Experiment 1 |
 | Rigidity-API correlation | Analogs (general) | R² > 0.6 | Observed (SalA series) | Moderate | Limited to one scaffold |
-| LogP sweet spot | CNS agents | 2.5–3.5 optimal | Observed (6 compounds) | Moderate | Small sample size |
+| LogP sweet spot | CNS agents | 2.5–3.5 optimal | Observed (10 compounds, pilot) | Moderate | Small sample size |
 
 **Key:** CPD = cumulative population doublings; TTP = time to progression; SalA = salvinorin A; Salv. = salvinorin; Psilo. = psilocybin.
 
@@ -1276,7 +1278,7 @@ This work received no specific grant from funding agencies in the public, commer
 
 **Repository:** Zenodo (DOI to be assigned upon publication)
 **Contents:** 
-1. Compound_Properties_Database.csv (6 compounds × 24 parameters)
+1. Compound_Properties_Database.csv (10 compounds × 36 parameters)
 2. API_Calculations_Full.xlsx (with Monte Carlo uncertainty ranges)
 3. Confidence_Grading_Matrix.csv (44 predictions with evidence base)
 4. Python_Code_API_Monte_Carlo.py (fully commented, MIT License)
@@ -1838,8 +1840,8 @@ def calculate_API_with_uncertainty(K_d_params, tau_params, t_onset_params, EC50_
 |----------|-------------------|-------------|---------------|-----------|---------------------|
 | **Structural Signatures** |  |  |  |  |  |
 | Rigidity-API correlation | R² > 0.6 across scaffolds | 0.71 (SalA series) | 1 scaffold (N=8) | Moderate | Extend to ≥3 scaffolds |
-| LogP optimum (CNS) | 2.5–3.5 for brain:plasma max | Observed in 6 compounds | Small sample | Moderate | Test ≥20 KOR agonists |
-| Residence time > t₁/₂ | R²_τ = 0.74 vs. R²_t₁/₂ = 0.28 | 6 compounds | Limited N | Moderate | Meta-analysis ≥30 drugs |
+| LogP optimum (CNS) | 2.5–3.5 for brain:plasma max | Observed in 10 compounds (pilot) | Small sample | Moderate | Test ≥20 KOR agonists |
+| Residence time > t₁/₂ | R²_τ = 0.74 vs. R²_t₁/₂ = 0.28 | 10 compounds (pilot) | Limited N | Moderate | Meta-analysis ≥30 drugs |
 | **Entropy Metrics** |  |  |  |  |  |
 | Salvinorin EMC_neural | < –0.3 | Extrapolated from GABAergics | 3-layer inference | Low | EEG/fMRI direct measurement |
 | Psilocybin EMC_neural | > +0.2 | Published LSD/psilocybin data¹²²,¹²³ | Multiple fMRI studies | High | Established |

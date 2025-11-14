@@ -8,7 +8,7 @@
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 [![CI Tests](https://img.shields.io/github/actions/workflow/status/Mythmaker28/arrest-molecules/python-test.yml?branch=main&label=tests)](https://github.com/Mythmaker28/arrest-molecules/actions)
 
-**Framework théorique pour l'étude des composés induisant des pauses biologiques productives**
+**Hypothèse exploratoire et framework pilote pour l'étude des composés à effets d'amortissement biologique**
 
 > 📢 **Version actuelle : v1.1.1** | [📥 Télécharger la dernière release](https://github.com/Mythmaker28/arrest-molecules/releases/latest) | [📖 Notes de version](https://github.com/Mythmaker28/arrest-molecules/releases/tag/v1.1.1)
 
@@ -29,20 +29,42 @@
 
 ---
 
+## ⚠️ Avertissement Méthodologique
+
+**Ce projet présente une hypothèse de travail exploratoire, non un cadre établi.**
+
+- ✅ **Points forts:** Transparence des données, code reproductible, prédictions falsifiables, classement par confiance
+- ⚠️ **Limitations critiques:**
+  - Seulement 10 composés (échantillon pilote)
+  - Aucune donnée expérimentale nouvelle générée
+  - Métriques proposées (API, EMC, NCR, etc.) **ne sont pas encore validées empiriquement**
+  - 59% des prédictions sont de confiance modérée ou faible
+  - Classifications basées sur des seuils arbitraires nécessitant validation
+
+**Ce travail vise à stimuler la recherche, pas à fournir des conclusions définitives.**
+
+---
+
 ## Description
 
-This data package accompanies the manuscript "Molecular Arrest in Biological Regulation: A Unifying Framework for Natural Compounds with Dampening Effects" submitted to *Frontiers in Pharmacology*.
+This data package accompanies the manuscript "Molecular Arrest in Biological Regulation: A Working Hypothesis for Natural Compounds with Dampening Effects" submitted to *Frontiers in Pharmacology*.
+
+**⚠️ IMPORTANT: This is a pilot hypothesis-generating framework, not an established paradigm.** The work proposes testable concepts requiring prospective experimental validation.
 
 The package contains:
-- Curated molecular properties for **10 paradigmatic compounds** spanning the full arrest-oscillation continuum
-- Calculated pharmacological metrics (API, EMC, NCR, AKR, PARI)
+- Curated molecular properties for **10 exemplar compounds**: 8 arrest agents (salvinorin A, paclitaxel, rapamycin, capsaicin, tetrodotoxin, resveratrol, ibogaine, noribogaine) + 2 oscillatory controls (psilocybin, LSD) for boundary comparison
+- **Proposed** pharmacological metrics (API, EMC, NCR, AKR, PARI) — *indices requiring empirical validation*
 - Uncertainty quantification via Monte Carlo simulation
-- Confidence grading for 44 quantitative predictions
+- Confidence grading for 44 quantitative predictions (41% high confidence, 30% moderate, 30% low)
 - Executable code for reproducing all calculations
 - **5 extended case studies** (ibogaine/noribogaine, resveratrol, fasting/breathing, psilocybin/LSD, AI memory)
 - Data dictionary and usage protocols
 
-**No new experimental data were generated.** All values are derived from published literature (95+ primary sources cited in main manuscript and supplements).
+**⚠️ LIMITATIONS:**
+- **No new experimental data were generated.** All values are literature-derived (95+ sources).
+- **Small dataset:** Only 10 compounds; conclusions remain tentative.
+- **Metrics are proposed, not validated:** API, EMC, NCR, AKR, PARI require prospective testing.
+- **Many predictions are low-to-moderate confidence:** See `Confidence_Grading_Matrix.csv` for details.
 
 ---
 
@@ -153,13 +175,15 @@ python run_arrest_pipeline.py
    ```
 5. Output: API = 0.12 [95% CI: 0.08-0.16], Confidence: MODERATE
 
-### For users wanting to extend framework to new compounds:
+### For users wanting to test the framework with new compounds:
 
-1. Gather required parameters (K_d, k_off or duration, t_onset, EC₅₀)
+1. Gather required parameters from literature (K_d, k_off or duration, t_onset, EC₅₀)
 2. Add row to `Compound_Properties_Database.csv`
 3. Run Python script with `--new_compound` flag
 4. Compare API to reference standards (Table 1 in manuscript)
-5. Assign arrest level based on EMC/NCR/PARI criteria
+5. **Critically evaluate** whether arrest classification criteria (EMC/NCR/PARI) apply
+
+**Caution:** The classification system is a working hypothesis. Empirical validation against experimental outcomes is essential before drawing conclusions.
 
 ### For users wanting to reproduce figures:
 
@@ -221,11 +245,13 @@ python run_arrest_pipeline.py
 ## Usage Notes
 
 ### Target Audience
-- Pharmacologists validating framework predictions
-- Medicinal chemists designing novel arrest agents
-- Systems biologists studying network dynamics
-- Clinicians exploring chronopharmacology applications
-- Educators teaching quantitative pharmacology
+- Pharmacologists interested in testing the framework's predictions
+- Medicinal chemists exploring potential dampening agent design principles
+- Systems biologists studying network dynamics and oscillatory processes
+- Researchers evaluating chronopharmacology hypotheses
+- Educators seeking quantitative pharmacology case studies
+
+**Note:** This framework is exploratory. Users should critically evaluate claims and contribute to validation efforts.
 
 ### How to Cite This Work
 
@@ -279,11 +305,13 @@ python run_arrest_pipeline.py
 - 44 predictions with confidence grading
 - Monte Carlo uncertainty quantification implemented
 
-**Planned updates:**
-- **v1.2:** Add salvinorin A analogs (8 compounds) from Supplementary Table S2
-- **v2.0:** Incorporate Experiment 1 results (salvinorin fMRI data) when available
-- **v2.1:** Incorporate Experiment 2 results (oscillatory cellular lifespan)
-- **v3.0:** Clinical validation from Experiment 3 (TRD trial)
+**Planned updates (contingent on validation):**
+- **v1.2:** Add salvinorin A analogs (8 compounds) from Supplementary Table S2 — *if SAR patterns hold*
+- **v2.0:** Incorporate Experiment 1 results (salvinorin fMRI data) — *if predictions confirmed*
+- **v2.1:** Incorporate Experiment 2 results (oscillatory cellular lifespan) — *if oscillatory advantage validated*
+- **v3.0:** Clinical validation from Experiment 3 (TRD trial) — *if safety/efficacy demonstrated*
+
+**Note:** Future versions depend on prospective experimental validation. If key predictions fail, the framework will require substantial revision or abandonment.
 
 ---
 

@@ -322,6 +322,10 @@ La dépression chronique correspond à un **état verrouillé** du DMN (ruminati
 
 ## Case Study 5: Extension computationnelle – Mémoire IA et pauses artificielles
 
+**⚠️ NOTE MÉTHODOLOGIQUE:** Cette section présente une analogie conceptuelle spéculative entre arrest biologique et mécanismes d'apprentissage artificiel. Elle n'est PAS basée sur des données pharmacologiques et sert uniquement d'illustration théorique du concept "pause productive". Les parallèles présentés sont suggestifs mais ne constituent pas une validation du framework molecular arrest.
+
+---
+
 ### Analogie avec les réseaux neuronaux artificiels
 
 Les **réseaux neuronaux artificiels** (ANNs) présentent des analogies frappantes avec les systèmes vivants. Pour éviter la **sur-adaptation** (*overfitting*) et améliorer la **généralisation**, les architectures modernes incorporent déjà des **pauses artificielles** :

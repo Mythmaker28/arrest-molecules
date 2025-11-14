@@ -1,7 +1,7 @@
 Category,Specific_Prediction,Value_or_Range,Evidence_Type,Confidence_Level,Validation_Required,PMID_References
 Structural_Signatures,Rigidity-API correlation R² > 0.6,0.71 (SalA series),1 scaffold (N=8 analogs),Moderate,Extend to ≥3 scaffolds,Multiple
-Structural_Signatures,LogP optimum for CNS agents,2.5-3.5,Observed in 6 compounds,Moderate,Test ≥20 KOR agonists,Multiple
-Structural_Signatures,Residence time > plasma t1/2 correlation,R²_tau=0.74 vs R²_t1/2=0.28,6 compounds analysis,Moderate,Meta-analysis ≥30 drugs,Multiple
+Structural_Signatures,LogP optimum for CNS agents,2.5-3.5,Observed in 10 compounds (pilot),Moderate,Test ≥20 KOR agonists,Multiple
+Structural_Signatures,Residence time > plasma t1/2 correlation,R²_tau=0.74 vs R²_t1/2=0.28,10 compounds pilot analysis,Moderate,Meta-analysis ≥30 drugs,Multiple
 Entropy_Metrics,Salvinorin A EMC_neural,< -0.3,Extrapolated from GABAergics + KOR mechanism,Low,EEG/fMRI direct measurement,Predicted
 Entropy_Metrics,Psilocybin EMC_neural,> +0.2,Published LSD/psilocybin fMRI,High,Established,26517207;24550805
 Entropy_Metrics,Rapamycin EMC_metabolic,-0.4,Single-cell metabolomics,Moderate,Replication needed,31337748

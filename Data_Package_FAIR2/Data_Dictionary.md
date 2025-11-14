@@ -15,7 +15,7 @@ Ce dictionnaire de données définit toutes les variables et colonnes utilisées
 
 ## 1. Compound_Properties_Database.csv
 
-Propriétés pharmacologiques et physicochimiques pour 6 composés paradigmatiques.
+Propriétés pharmacologiques et physicochimiques pour 10 composés représentant le continuum arrest-oscillation.
 
 | Colonne | Description | Unités | Type | Plage valide | Exemple | Méthode/Source |
 |---------|-------------|--------|------|--------------|---------|----------------|
