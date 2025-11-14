@@ -29,12 +29,27 @@ The package contains:
 
 ### Core Data Tables
 
-**1. Compound_Properties_Database.csv** (10 rows × 36 columns)
+**1. Compound_Properties_Database.csv** (10 rows × 36 columns) ✅ VALIDATED
 - Molecular properties: formula, MW, logP, rotatable bonds, SMILES, InChI
 - Binding parameters: K_i, K_d, EC₅₀, k_off
 - Pharmacokinetics: t₁/₂, C_max, AUC, V_d, clearance, protein binding
 - **New compounds:** Ibogaine, Noribogaine (hybrid arrest), Psilocybin, LSD (arrest-oscillation continuum)
 - Literature sources: PubMed IDs for each parameter
+- **Status:** Stable, validated, reproducible (main dataset)
+
+**1.1 Compound_Properties_Experimental_Extended.csv** (9 rows × 36 columns) ⚠️ EXPERIMENTAL
+- **NEW in v1.2-experimental:** Extended dataset with partial data
+- Same structure as main CSV but with incomplete/estimated values
+- **Compounds added:**
+  - **KOR agonists:** Nalfurafine (FDA approved Japan)
+  - **mTORC1 inhibitors:** Everolimus, Temsirolimus (rapalogs)
+  - **GABAergic agents:** Muscimol, Diazepam, Propofol
+  - **Sleep/metabolic:** Adenosine (endogenous)
+  - **Negative controls:** Curcumin, Quercetin (polyphenols)
+- **Confidence:** MODERATE to LOW (6 MODERATE, 3 LOW)
+- **Purpose:** Exploratory analysis, SAR validation, future data acquisition planning
+- **Caution:** Contains placeholders (NR, EST, NA). NOT for definitive conclusions without validation
+- See `CANDIDATE_MOLECULES_TODO.md` for data completion status and priorities
 
 **2. API_Calculations_Full.xlsx** (multi-sheet workbook)
 - Sheet 1: Input parameters with literature sources
@@ -55,6 +70,12 @@ The package contains:
 - Primary/secondary outcomes
 - Success/falsification criteria
 - Estimated costs and timelines
+
+### Extended / Candidate Data (optional)
+
+**Compound_Properties_Experimental_Extended.csv**  
+- Same schema as the core database; contains candidate/extended compounds with partial data (fields may be `NR/NA/ND/EST`)  
+- Does not affect core validation scripts; intended for ongoing data-harvesting without breaking the validated 10-compound dataset
 
 ### Code and Scripts
 
@@ -206,7 +227,21 @@ Standard en science computationnelle pour la reproductibilité des publications.
 
 ## Version History
 
-**v1.1 (October 2025):** ⭐ CURRENT
+**v1.2-experimental (November 2025):** 🔬 LATEST (Experimental Extension)
+- **Extended dataset file added:** `Compound_Properties_Experimental_Extended.csv` with 9 new compounds
+- **Total compounds:** 19 (10 validated + 9 experimental with partial data)
+- **New compound classes:**
+  - KOR agonists: Nalfurafine (clinical Japan)
+  - Rapalogs: Everolimus, Temsirolimus (FDA approved mTORC1 inhibitors)
+  - GABAergic: Muscimol, Diazepam, Propofol (arrest spectrum)
+  - Homeostatic: Adenosine (endogenous sleep signal)
+  - Negative controls: Curcumin, Quercetin (minimal arrest)
+- **Data quality:** 6 MODERATE, 3 LOW confidence (marked with EST/NR placeholders)
+- **Documentation:** Extended `Data_Dictionary.md` with experimental data guidelines and migration criteria
+- **Purpose:** Exploratory SAR analysis, identify data gaps, plan future acquisitions
+- **Note:** Main 10-compound dataset remains LOCKED and validated
+
+**v1.1 (October 2025):**
 - **Extended dataset:** 6 → 10 compounds (+67%)
 - **New compounds:** Ibogaine, Noribogaine (hybrid arrest), Psilocybin, LSD (oscillation)
 - Updated predictions: 42 → 44 with refined confidence grading
@@ -219,7 +254,8 @@ Standard en science computationnelle pour la reproductibilité des publications.
 - Monte Carlo uncertainty quantification implemented
 
 **Planned updates:**
-- **v1.1:** Add salvinorin A analogs (8 compounds) from Supplementary Table S2
+- **v1.3:** Complete PK data for nalfurafine, everolimus, temsirolimus → migrate to main CSV
+- **v1.4:** Add mesyl salvinorin B and U50,488 (KOR agonist SAR series)
 - **v2.0:** Incorporate Experiment 1 results (salvinorin fMRI data) when available
 - **v2.1:** Incorporate Experiment 2 results (oscillatory cellular lifespan)
 - **v3.0:** Clinical validation from Experiment 3 (TRD trial)
@@ -267,6 +303,7 @@ Data compilation supported by independent literature review with quality verific
 
 ## Changelog
 
+**2025-11-14:** Dataset v1.2-experimental - Extended CSV with 9 additional compounds (partial data)
 **2025-10-21:** Dataset v1.1 released with expanded compound set (10 compounds total)
 **2025-10-21:** Dataset v1.0 initial submission (6 compounds)
 

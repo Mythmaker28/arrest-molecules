@@ -15,7 +15,44 @@ Ce dictionnaire de données définit toutes les variables et colonnes utilisées
 
 ## 1. Compound_Properties_Database.csv
 
+**Statut:** Validé, stable, reproductible (dataset principal)  
 Propriétés pharmacologiques et physicochimiques pour 10 composés représentant le continuum arrest-oscillation.
+
+## 1.1 Compound_Properties_Experimental_Extended.csv
+
+**Statut:** Expérimental, données partielles, en développement  
+**Nouveau dans cette version:** Fichier CSV étendu contenant 9 composés additionnels avec données partielles.
+
+Ce fichier suit exactement la même structure que `Compound_Properties_Database.csv` mais contient des composés pour lesquels toutes les données requises ne sont pas encore complètes. Les valeurs manquantes sont marquées par des codes standardisés (NR, NA, EST).
+
+**Composés inclus (9 total):**
+- Nalfurafine (KOR agonist, FDA approved Japan)
+- Everolimus (mTORC1 inhibitor, rapalog)
+- Temsirolimus (mTORC1 inhibitor, rapalog)
+- Muscimol (GABA_A agonist, research tool)
+- Diazepam (GABA_A modulator, benzodiazepine)
+- Propofol (GABA_A agonist, anesthetic)
+- Adenosine (A1 receptor agonist, endogenous)
+- Curcumin (polyphenol, negative control)
+- Quercetin (polyphenol, negative control)
+
+**Justification de la séparation:**
+- Maintenir l'intégrité du dataset validé original (10 composés)
+- Permettre l'évolution et l'amélioration progressive des données étendues
+- Transparence sur le niveau de confiance (MODERATE à LOW pour la plupart)
+- Faciliter les contributions futures sans risquer la reproductibilité du core dataset
+
+**Utilisation:**
+- Pour analyse exploratoire et identification de patterns SAR
+- Pour planification de futures acquisitions de données
+- NE PAS utiliser pour conclusions définitives sans validation supplémentaire
+- Les valeurs marquées "EST" (estimées) doivent être confirmées par mesures directes
+
+**Prochaines étapes:**
+- Compléter les paramètres PK manquants (Cmax, AUC, Vd, Clearance)
+- Obtenir des mesures directes pour remplacer les estimations
+- Valider les métriques EMC/NCR/PARI par neuroimaging ou essais fonctionnels
+- Migrer les composés vers le dataset principal une fois validation complète
 
 | Colonne | Description | Unités | Type | Plage valide | Exemple | Méthode/Source |
 |---------|-------------|--------|------|--------------|---------|----------------|
@@ -62,6 +99,45 @@ Propriétés pharmacologiques et physicochimiques pour 10 composés représentan
 - **ND** : Non déterminé (mesure non encore effectuée)
 - **NR** : Non rapporté dans la littérature
 - **EST** : Estimé (valeur non directement mesurée)
+
+---
+
+## 1bis. Compound_Properties_Experimental_Extended.csv (NOUVEAU - Expérimental)
+
+⚠️ **STATUT: EXPERIMENTAL / NON VALIDÉ**
+
+Propriétés pharmacologiques **partielles** pour **3 composés candidats** en cours d'évaluation pour inclusion dans le framework. Ce fichier contient des données incomplètes et n'est PAS validé.
+
+**Utilisation appropriée:**
+- Planification des recherches bibliographiques
+- Identification des gaps de données
+- Priorisation des efforts d'extraction
+
+**NE PAS utiliser pour:**
+- Publications scientifiques
+- Calculs API définitifs
+- Prédictions quantitatives
+
+### Structure du fichier
+- **Colonnes:** Identiques à `Compound_Properties_Database.csv` (36 colonnes)
+- **Lignes:** 3 composés actuels (diazepam, everolimus, nalfurafine)
+- **Complétude:** 60-75% des paramètres par composé
+- **Encodage valeurs manquantes:** NR (Not Reported), NA (Not Applicable)
+
+### Composés actuels (n=3)
+
+| Compound | Class | Status | Completeness | Priority | Next Steps |
+|----------|-------|--------|--------------|----------|------------|
+| Diazepam | GABA_A PAM | EXPERIMENTAL | 70% | ⭐ HIGH | Extraire SMILES, Cmax/AUC, EMC/NCR |
+| Everolimus | mTOR inhibitor | EXPERIMENTAL | 65% | ⭐ HIGH | Extraire SMILES, raffiner k_off, PARI |
+| Nalfurafine | KOR agonist | EXPERIMENTAL | 70% | ⭐ HIGH | Extraire SMILES, valider k_off, EMC/NCR |
+
+### Validation
+- **Statut:** ❌ NON VALIDÉ (data_validation.py pas encore exécuté sur Extended CSV)
+- **Raison:** Données incomplètes (SMILES manquants, API non calculés)
+- **Critères pour validation:** ≥80% complétude + tous paramètres obligatoires présents
+
+Voir `EXTENDED_DATASET_README.md` pour détails complets.
 
 ---
 
@@ -232,10 +308,66 @@ Pour questions sur le dictionnaire ou signaler erreurs, ouvrir un issue sur GitH
 
 | Version | Date | Changements |
 |---------|------|-------------|
-| 1.1 | 2025-10-21 | Ajout 4 nouveaux composés (ibogaine, noribogaine, psilocybin, LSD), 44 prédictions |
+| 1.2-experimental | 2025-11-14 | **Extended dataset:** Ajout fichier `Compound_Properties_Experimental_Extended.csv` avec 9 composés additionnels (nalfurafine, everolimus, temsirolimus, muscimol, diazepam, propofol, adenosine, curcumin, quercetin). Données partielles, confidences MODERATE-LOW. Total: 19 composés (10 validés + 9 expérimentaux) |
+| 1.1 | 2025-10-21 | Ajout 4 nouveaux composés au dataset principal (ibogaine, noribogaine, psilocybin, LSD), 44 prédictions |
 | 1.0 | 2025-10-21 | Version initiale accompagnant soumission manuscrit (6 composés, 42 prédictions) |
 
 ---
 
+## 10. Notes sur les données expérimentales étendues
+
+### Codes de valeurs manquantes (rappel)
+
+- **NR** (Not Reported): Paramètre non rapporté dans la littérature accessible
+- **NA** (Not Applicable): Paramètre non applicable à ce composé (ex: EMC pour composés non-neuraux)
+- **ND** (Not Determined): Mesure non encore effectuée mais planifiée
+- **EST** (Estimated): Valeur estimée à partir d'autres données (méthode indiquée dans colonne *_method)
+
+### Niveaux de priorité pour complétion des données
+
+**HAUTE PRIORITÉ (nécessaire pour migration vers dataset principal):**
+- Mesures de liaison directes (Ki/Kd) avec PMIDs de sources primaires
+- Paramètres PK humains (Cmax, AUC, t_half, Vd, Clearance)
+- k_off mesurés (pas estimés) pour calcul précis de tau_residence
+- EC50 fonctionnels avec type d'assay clairement spécifié
+
+**PRIORITÉ MOYENNE (utile pour métriques dérivées):**
+- EMC (Entropy Modulation Coefficient) à partir de données neuroimaging
+- NCR (Network Connectivity Reduction) à partir de fMRI/EEG
+- PARI (Post-Arrest Resilience Index) à partir d'études longitudinales
+- AKR (Arrest Kinetics Ratio) calculé avec cinétiques mesurées
+
+**PRIORITÉ BASSE (nice-to-have):**
+- Identifiants moléculaires complets (InChI, SMILES vérifiés)
+- Propriétés physicochimiques (LogP, Rotatable Bonds)
+- Données de liaison aux protéines plasmatiques
+- Statuts cliniques et réglementaires détaillés
+
+### Critères de migration vers dataset principal
+
+Un composé du fichier Extended peut être migré vers le dataset principal si:
+
+1. ✅ **Ki/Kd mesuré directement** avec PMID source (pas d'estimation)
+2. ✅ **k_off mesuré** ou tau_residence cliniquement validé
+3. ✅ **EC50 fonctionnel** avec assay type documenté
+4. ✅ **t_onset** basé sur données humaines ou animales claires
+5. ✅ **PK parameters** : au moins 3/5 parmi (Cmax, AUC, t_half, Vd, Clearance)
+6. ✅ **Confidence grade** : MODERATE-HIGH ou supérieur
+7. ✅ **Validation** : Passage des scripts data_validation.py et quickcheck_api.py
+
+**Composés proches de la migration:**
+- **Nalfurafine**: Manque Cmax, AUC, Vd, Clearance (priorité HAUTE)
+- **Diazepam**: Manque EMC/NCR neuroimaging, sinon excellent
+- **Everolimus/Temsirolimus**: Manquent Ki directs avec PMIDs, k_off mesurés
+
+**Composés nécessitant travail substantiel:**
+- **Muscimol**: Surtout données animales, PK humaine quasi inexistante
+- **Propofol**: k_off GABA_A pas bien caractérisé malgré usage clinique massif
+- **Curcumin/Quercetin**: Volontairement "faibles" comme contrôles négatifs
+
+---
+
 **Licence:** Ce dictionnaire est publié sous CC-BY 4.0. Vous êtes libre de le partager et l'adapter avec attribution appropriée.
+
+---
 

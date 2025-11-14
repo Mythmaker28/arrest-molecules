@@ -16,7 +16,6 @@ seaborn==0.12.2  # Enhanced plotting
 statsmodels==0.14.0
 
 # Optional: For advanced features
-seaborn==0.12.2  # Enhanced plotting
 openpyxl==3.1.2  # Excel file support
 
 # Development (optional)
