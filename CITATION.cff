@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use this dataset or framework, please cite it as below."
 type: dataset
 title: "Molecular Arrest Framework Research Data Package"
-version: "1.1.1"
-date-released: "2025-10-23"
+version: "1.1.2"
+date-released: "2025-11-14"
 authors:
   - family-names: "Lepesteur"
     given-names: "Tommy"
@@ -14,9 +14,10 @@ url: "https://github.com/Mythmaker28/arrest-molecules"
 abstract: >
   A unifying theoretical framework for natural compounds with dampening 
   effects on biological regulation. Includes curated data for 10 paradigmatic 
-  compounds, quantitative metrics (API, EMC, NCR, PARI), Monte Carlo 
-  uncertainty quantification, and 44 testable predictions with confidence 
-  grading. All data derived from 95+ published sources (FAIR² compliant).
+  compounds (core dataset) plus 25 candidate molecules (extended dataset), 
+  quantitative metrics (API, EMC, NCR, PARI), Monte Carlo uncertainty 
+  quantification, and 44 testable predictions with confidence grading. 
+  All data derived from 100+ published sources (FAIR² compliant).
 keywords:
   - pharmacology
   - molecular arrest

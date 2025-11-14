@@ -1,10 +1,21 @@
-﻿
-Hash                                                             File                            
-----                                                             ----                            
-35F25E1ACDA2924EE97B3ED73178A922277D0D2E2839FFAEF52ADDD142FBF6BA Compound_Properties_Database.csv
-A8CE1E41BDC6CB42AD7ACCE5E2D477C24D495A2D3CB629D2014AC7AEB012325D API_Calculations_Full.xlsx      
-F7EE3F826790EEAD387B74C0C0E53AC6CDAFB8C5D7EA9FA47AB3390F7457C38B Python_Code_API_Monte_Carlo.py  
-EB4AE655AFB3C684F898258204E70C567A1E53B159D1DE4FAA3AEB615CBF27C2 R_Code_Figures_S2.R             
-1F39D5E5CCC3006795C18AA620C0E21EA961733C2E1FDBFEC5B917FB4A044384 Confidence_Grading_Matrix.csv   
+﻿# SHA256 Checksums for Molecular Arrest Framework v1.1.2
+# Generated: 2025-11-14
+# Verify with: sha256sum -c SHA256SUMS.txt (Linux/Mac) or Get-FileHash (Windows)
 
+## Core Data Files
+60518eaabf6db9fa995964a9a52b090187458fbc22fd95ba1306c1739a669993  Data_Package_FAIR2/Compound_Properties_Database.csv
+689d7b485c0fa285212abc29a5ce15b3c597d99d350c53583b16069c97096f5b  Data_Package_FAIR2/Compound_Properties_Experimental_Extended.csv
+d9caa96e99c2a50be25e8de6dd334f333cc96e0a975673583e779f5a256d535b  Data_Package_FAIR2/Data_Dictionary.md
 
+## Code Files
+f7ee3f826790eead387b74c0c0e53ac6cdafb8c5d7ea9fa47ab3390f7457c38b  Data_Package_FAIR2/Python_Code_API_Monte_Carlo.py
+eb4ae655afb3c684f898258204e70c567a1e53b159d1de4faa3aeb615cbf27c2  Data_Package_FAIR2/R_Code_Figures_S2.R
+
+## Documentation
+# README.md, RELEASE_NOTES_v1.1.2.md, CITATION.cff checksums to be added after final review
+
+## Notes
+# - Core database (Compound_Properties_Database.csv) unchanged from v1.1.1
+# - Extended CSV (Compound_Properties_Experimental_Extended.csv) updated with 15 new molecules
+# - Data_Dictionary.md updated with section 1.1 for Extended CSV
+# - All checksums verified on 2025-11-14

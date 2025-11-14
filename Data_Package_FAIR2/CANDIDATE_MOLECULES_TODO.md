@@ -132,6 +132,152 @@
 - Compare to rapamycin/everolimus/temsirolimus
 - **Action:** Review ridaforolimus clinical trial publications for PK data
 - **Priority:** LOW (rapalog class already well-represented with 3 compounds)
+## Priority 1: High-Confidence Arrest Candidates
+
+### 1. Muscimol (GABA_A agonist)
+**Rationale:** Prototypical neural arrest agent, extensively characterized  
+**Expected properties:**
+- High GABA_A affinity (K_i ~1-5 nM)
+- Rapid onset (minutes)
+- Clear entropy reduction (EMC < -0.3)
+- **TODO:** Extract K_d, k_off, EC50, t_onset from literature (PMIDs needed)
+- **Classification (predicted):** Level 2-3
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv`  
+**Search strings:** "muscimol Ki GABAA PMID", "muscimol EC50 GABAA assay PMID", "muscimol pharmacokinetics half-life PMID"
+
+### 2. Adenosine (A1 receptor agonist)
+**Rationale:** Endogenous arrest signal, metabolic dampening  
+**Expected properties:**
+- Moderate affinity (K_d ~10-50 nM)
+- Rapid kinetics
+- Metabolic arrest via glycolysis inhibition
+- **TODO:** Extract pharmacological parameters
+- **Classification (predicted):** Level 2
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv`  
+**Search strings:** "adenosine A1 Ki PMID", "adenosine EC50 A1 assay PMID", "adenosine human pharmacokinetics half-life PMID"
+
+### 3. Diazepam/Midazolam (Benzodiazepines)
+**Rationale:** Synthetic arrest agents, clinical validation  
+**Expected properties:**
+- GABA_A positive allosteric modulation
+- Well-characterized PK/PD
+- Clear NCR in neuroimaging studies
+- **TODO:** Extract binding and functional parameters
+- **Classification (predicted):** Level 2
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv` (Diazepam)  
+**Search strings:** "diazepam benzodiazepine receptor Ki PMID", "diazepam EC50 GABAA PMID", "midazolam GABAA potency PMID", "diazepam human Cmax AUC PMID"
+
+### 3b. Zolpidem (GABA_A selective modulator)
+**Rationale:** Non-benzodiazepine hypnotic; comparator for sedative arrest without anesthesia  
+**Expected properties:**
+- GABA_A α1-preferring PAM, fast onset
+- Strong sedation with preserved respiration (vs propofol)
+- **TODO:** Extract Ki, EC50 (α1), PK (t1/2, Cmax, clearance)
+- **Classification (predicted):** Level 2  
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv`  
+**Search strings:** "zolpidem GABAA alpha1 Ki PMID", "zolpidem EC50 electrophysiology PMID", "zolpidem pharmacokinetics half-life Cmax PMID"
+
+### 4. Propofol (General anesthetic)
+**Rationale:** Extreme arrest example, dose-dependent consciousness modulation  
+**Expected properties:**
+- GABA_A activation
+- EMC ~-0.6 to -0.8 (established from anesthesia literature)
+- NCR > 70%
+- **TODO:** Extract quantitative parameters
+- **Classification (predicted):** Level 3 (with post-anesthetic resilience)
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv`  
+**Search strings:** "propofol GABAA Ki PMID", "propofol EC50 hypnosis effect-site PMID", "propofol PK half-life clearance PMID"
+
+---
+
+## Priority 2: mTOR/Metabolic Modulators
+
+### 5. Everolimus (mTOR inhibitor)
+**Rationale:** FDA-approved rapalog, similar mechanism to rapamycin  
+**Expected properties:**
+- High mTOR affinity (K_i ~0.1-1 nM)
+- Slower onset than rapamycin
+- Similar PARI profile
+- **TODO:** Compare API to rapamycin
+- **Classification (predicted):** Level 3
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv`  
+**Search strings:** "everolimus mTOR FKBP12 Ki PMID", "everolimus EC50 mTORC1 phosphorylation PMID", "everolimus human pharmacokinetics t1/2 Cmax AUC PMID"
+
+### 6. Temsirolimus (mTOR inhibitor)
+**Rationale:** Another rapalog for SAR validation  
+**Expected properties:**
+- Similar to everolimus/rapamycin
+- **TODO:** Extract parameters for rapalog class comparison
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv`  
+**Search strings:** "temsirolimus mTOR FKBP12 Ki PMID", "temsirolimus EC50 S6K phosphorylation PMID", "temsirolimus PK t1/2 clearance PMID"
+
+### 6b. Ridaforolimus (mTOR inhibitor)
+**Rationale:** Additional rapalog to complete class expansion  
+**Expected properties:**
+- Similar mTORC1 inhibition; distinct PK vs everolimus/temsirolimus
+- **TODO:** Ki/EC50, PK (t1/2, Cmax, Vd), protein binding, clinical status
+- **Classification (predicted):** Level 3  
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv`  
+**Search strings:** "ridaforolimus AP23573 Ki mTOR PMID", "ridaforolimus pharmacokinetics half-life PMID"
+
+---
+
+## Priority 3: Additional KOR Agonists (SAR expansion)
+
+### 7. Nalfurafine
+**Rationale:** Clinically approved KOR agonist (Japan), less dysphoric  
+**Expected properties:**
+- K_i ~0.4 nM at KOR
+- High selectivity vs MOR/DOR
+- Clinical safety data available
+- **TODO:** Extract full pharmacological profile
+- **Classification (predicted):** Level 2-3
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv`  
+**Search strings:** "nalfurafine kappa opioid Ki PMID", "nalfurafine biased agonism G protein arrestin PMID", "nalfurafine human PK half-life PMID"
+
+### 8. Mesyl Salvinorin B
+**Rationale:** Salvinorin A analog with improved selectivity  
+**Expected properties:**
+- K_i ~0.6 nM
+- 11,000× KOR selectivity
+- Mentioned in manuscript SAR section
+- **TODO:** Extract complete dataset for inclusion
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv`  
+**Search strings:** "mesyl salvinorin B Ki OPRK1 PMID", "salvinorin analog mesyl SAR PMID"
+
+### 9. U50,488 (KOR agonist comparator)
+**Rationale:** Reference KOR agonist for SAR and class baselining  
+**Expected properties:**
+- Potent KOR agonist; dysphoria comparator to biased ligands
+- **TODO:** Ki/Kd, k_off/τ, t_onset, EC50 (GIRK/β-arrestin bias), PK
+- **Classification (predicted):** Level 2  
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv`  
+**Search strings:** "U50,488 kappa opioid Ki PMID", "U50,488 beta-arrestin bias PMID", "U50488 pharmacokinetics PMID"
+
+---
+
+## Priority 4: Negative Controls (Minimal Arrest)
+
+### 9. Curcumin
+**Rationale:** Popular "nutraceutical" with weak effects  
+**Expected properties:**
+- Multiple targets, low affinity (~μM range)
+- Poor bioavailability
+- Minimal arrest signatures
+- **TODO:** Extract parameters to serve as Level 0-1 comparator
+- **Classification (predicted):** Level 0-1 (sub-arrest threshold)
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv`  
+**Search strings:** "curcumin target affinity Ki PMID", "curcumin human PK low bioavailability PMID"
+
+### 10. Quercetin
+**Rationale:** Another polyphenol with weak multi-target effects  
+**Expected properties:**
+- Similar to curcumin, resveratrol
+- Weak SIRT1 activation
+- **TODO:** Extract parameters
+- **Classification (predicted):** Level 1
+**Status:** Partial row added to `Compound_Properties_Experimental_Extended.csv`  
+**Search strings:** "quercetin target affinity Ki PMID", "quercetin human pharmacokinetics Cmax AUC PMID"
 
 ---
 

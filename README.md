@@ -10,15 +10,15 @@
 
 **Hypothèse exploratoire et framework pilote pour l'étude des composés à effets d'amortissement biologique**
 
-> 📢 **Version actuelle : v1.2.0-experimental** | [📥 Télécharger la dernière release](https://github.com/Mythmaker28/arrest-molecules/releases/latest) | [📖 Notes de version](https://github.com/Mythmaker28/arrest-molecules/releases/tag/v1.2.0-experimental)
+> 📢 **Version actuelle : v1.1.2** | [📥 Télécharger la dernière release](https://github.com/Mythmaker28/arrest-molecules/releases/latest) | [📖 Notes de version](RELEASE_NOTES_v1.1.2.md)
 
 ---
 
 <!--VERSION-START-->
-**Version actuelle (latest):** v1.2.0-experimental ⚗️  
-**Date de release :** 14 November 2025  
+**Version actuelle (latest):** v1.1.2  
+**Date de release :** 14 novembre 2025  
 **DOI Zenodo :** 10.5281/zenodo.17420685  
-**Note:** Experimental release with extended dataset (9 additional compounds with partial data)
+**Note:** Extended dataset release with 25 candidate molecules (15 with complete/partial data)
 <!--VERSION-END-->
 
 **Author:** Tommy Lepesteur  
@@ -36,8 +36,8 @@
 
 - ✅ **Points forts:** Transparence des données, code reproductible, prédictions falsifiables, classement par confiance
 - ⚠️ **Limitations critiques:**
-  - **Core dataset:** 10 composés validés (échantillon pilote)
-  - **Extended dataset (v1.2-experimental):** 9 composés additionnels avec données partielles (NR/EST placeholders)
+  - **Core dataset:** 10 composés validés (échantillon pilote, reproductibilité garantie)
+  - **Extended dataset (v1.1.2):** 25 composés candidats (15 avec données complètes/partielles, 10 avec placeholders NR/EST)
   - Aucune donnée expérimentale nouvelle générée
   - Métriques proposées (API, EMC, NCR, etc.) **ne sont pas encore validées empiriquement**
   - 59% des prédictions sont de confiance modérée ou faible
@@ -55,8 +55,14 @@ This data package accompanies the manuscript "Molecular Arrest in Biological Reg
 
 The package contains:
 - **Core validated dataset:** 10 exemplar compounds with complete data: 8 arrest agents (salvinorin A, paclitaxel, rapamycin, capsaicin, tetrodotoxin, resveratrol, ibogaine, noribogaine) + 2 oscillatory controls (psilocybin, LSD)
-- **🆕 Extended experimental dataset (v1.2):** 9 additional compounds with partial data: nalfurafine, everolimus, temsirolimus, muscimol, diazepam, propofol, adenosine, curcumin, quercetin
-- **🆕 Data Quality Framework:** Explicit Tier A/B/C/D classification with completeness metrics (see `Data_Package_FAIR2/DATA_QUALITY_OVERVIEW.md`)
+- **🆕 Extended candidate dataset (v1.1.2):** 25 additional molecules across 6 pharmacological classes:
+  - KOR agonists (nalfurafine, mesyl salvinorin B, U50,488, U69,593, enadoline)
+  - mTOR inhibitors (everolimus, temsirolimus, ridaforolimus, zotarolimus, biolimus A9)
+  - GABA-A modulators (muscimol, diazepam, midazolam, zolpidem, propofol, etomidate, thiopental)
+  - Adenosine A1 agonists (adenosine, CPA, CCPA)
+  - Negative controls (curcumin, quercetin, EGCG)
+  - α2-adrenergic (dexmedetomidine)
+- **Data Quality Framework:** Explicit Tier A/B/C/D classification with completeness metrics (see `Data_Package_FAIR2/DATA_QUALITY_OVERVIEW.md`)
 - **Proposed** pharmacological metrics (API, EMC, NCR, AKR, PARI) — *indices requiring empirical validation*
 - Uncertainty quantification via Monte Carlo simulation
 - Confidence grading for 44 quantitative predictions (41% high confidence, 30% moderate, 30% low)
@@ -65,9 +71,12 @@ The package contains:
 - Data dictionary and usage protocols
 
 **⚠️ LIMITATIONS:**
-- **No new experimental data were generated.** All values are literature-derived (95+ sources).
-- **Core dataset:** 10 compounds (validated, Tier A/B) — conclusions remain tentative
-- **Extended dataset (v1.2-experimental):** 9 compounds with partial/estimated data (Tier B/C/D: 50-90% completeness) — exploratory only
+- **No new experimental data were generated.** All values are literature-derived (100+ sources).
+- **Core dataset:** 10 compounds (validated, Tier A/B) — conclusions remain tentative, reproductibility guaranteed
+- **Extended dataset (v1.1.2):** 25 compounds with varying data completeness:
+  - 15 with complete or substantial data (Tier B/C: 60-90% completeness)
+  - 10 with partial data requiring literature extraction (Tier D: <50% completeness)
+  - Extended CSV **not used by default** in validation scripts (preserves core reproducibility)
 - **Metrics are proposed, not validated:** API, EMC, NCR, AKR, PARI require prospective testing.
 - **Specific nuance for Salvinorin A:** KOR pharmacology evidence is VERY HIGH, but the Level 3 arrest classification is a hypothesis; imaging evidence (fMRI/PET) exists in humans/primates yet remains limited to a few small studies, not a large, systematic program.
 - **Psychedelic comparators (psilocybin, LSD, ayahuasca/DMT):** These are oscillatory/high-entropy comparators, NOT arrest molecules. They disrupt DMN connectivity and increase network entropy (EMC > 0), providing a contrast to the arrest candidates (EMC < 0).
@@ -87,21 +96,27 @@ The package contains:
 - Literature sources: PubMed IDs for each parameter
 - **Status:** Stable, reproducible, passes all validation tests
 
-**1.1 Compound_Properties_Experimental_Extended.csv** (9 rows × 36 columns) ⚗️ EXPERIMENTAL (v1.2)
-- **Same structure as core dataset** but with partial/incomplete data
-- **Compounds:** Nalfurafine, Everolimus, Temsirolimus, Muscimol, Diazepam, Propofol, Adenosine, Curcumin, Quercetin
-- **Purpose:** Exploratory data collection, SAR validation, candidate evaluation for future promotion to core dataset
-- **Data Quality:** Tier B (1), Tier C (5), Tier D (2) — see `DATA_QUALITY_OVERVIEW.md` for detailed assessment
-- **Completeness:** 50-90% depending on compound (many NR/EST/NA placeholders)
-- **Confidence:** 1 HIGH, 2 MODERATE-HIGH, 4 MODERATE, 2 LOW
-- **Caution:** ⚠️ This file contains preliminary data. Do NOT use for definitive conclusions without additional validation.
-- See `Data_Package_FAIR2/CANDIDATE_MOLECULES_TODO.md` for data gaps and `DATA_QUALITY_OVERVIEW.md` for tier justifications
+**1.1 Compound_Properties_Experimental_Extended.csv** (25 rows × 36 columns) 🆕 EXTENDED (v1.1.2)
+- **Same structure as core dataset** but with varying data completeness
+- **Compounds (25 total):**
+  - KOR agonists (5): Nalfurafine, Mesyl Salvinorin B, U50,488, U69,593, Enadoline
+  - mTOR inhibitors (5): Everolimus, Temsirolimus, Ridaforolimus, Zotarolimus, Biolimus A9
+  - GABA-A modulators (7): Muscimol, Diazepam, Midazolam, Zolpidem, Propofol, Etomidate, Thiopental
+  - A1 agonists (3): Adenosine, CPA, CCPA
+  - Negative controls (3): Curcumin, Quercetin, EGCG
+  - α2-adrenergic (1): Dexmedetomidine
+- **Purpose:** Framework extension, SAR validation, class comparisons, negative controls
+- **Data Quality:** Variable (Tier B/C/D) — 15 compounds with substantial data, 10 requiring extraction
+- **Completeness:** 15-100% depending on compound (explicit NR/NA/ND/EST placeholders)
+- **Confidence:** 2 HIGH, 5 MODERATE-HIGH, 6 MODERATE, 2 LOW (10 compounds pending full extraction)
+- **Usage:** ⚠️ **Not used by default validation scripts** (preserves core reproducibility)
+- See `Data_Package_FAIR2/CANDIDATE_MOLECULES_TODO.md` for extraction status and `Data_Dictionary.md` section 1.1
 
-**1.2 DATA_QUALITY_OVERVIEW.md** 🆕 Quality Framework (v1.2)
-- Explicit Tier A/B/C/D classification for all 19 compounds
+**1.2 DATA_QUALITY_OVERVIEW.md** 🆕 Quality Framework
+- Explicit Tier A/B/C/D classification for core + extended datasets
 - Completeness metrics and confidence justifications
 - Usage guidelines (which tiers suitable for what analyses)
-- Roadmap for compound promotion (e.g., "Diazepam 1 study away from Tier A")
+- Roadmap for compound promotion and data extraction priorities
 
 **2. API_Calculations_Full.xlsx** (multi-sheet workbook)
 - Sheet 1: Input parameters with literature sources

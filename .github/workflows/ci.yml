@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies (root)
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Install dependencies (Data_Package_FAIR2)
+        run: |
+          if [ -f Data_Package_FAIR2/requirements.txt ]; then pip install -r Data_Package_FAIR2/requirements.txt; fi
+
+      - name: Run data validation
+        working-directory: Data_Package_FAIR2
+        run: |
+          python data_validation.py
+
+      - name: Run unit tests
+        working-directory: Data_Package_FAIR2
+        run: |
+          python -m unittest -q
+
+      - name: Duplicate scan (non-blocking)
+        run: |
+          python tools/find_duplicates.py || true
+
+      - name: Validate placeholders and data consistency
+        working-directory: Data_Package_FAIR2
+        run: |
+          python validate_extended_csv.py
+
+      - name: Check API calculation script
+        working-directory: Data_Package_FAIR2
+        run: |
+          python quickcheck_api.py
+
+

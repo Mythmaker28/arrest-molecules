@@ -371,3 +371,12 @@ Un composé du fichier Extended peut être migré vers le dataset principal si:
 
 ---
 
+### 1.1. Compound_Properties_Experimental_Extended.csv
+
+Table complémentaire pour les composés candidats avec données partielles (enrichissement sans affecter l’ensemble validé de 10 composés).
+
+- Structure de colonnes: identique à `Compound_Properties_Database.csv`
+- Objectif: accueillir de nouvelles molécules avec champs manquants codés `NR/NA/ND/EST` jusqu’à extraction complète depuis la littérature
+- Validation: non utilisée par défaut par les scripts de validation principaux (préserve la reproductibilité du noyau), mais exploitable pour travaux en cours
+- Mouvement des données: ne pas déplacer/modifier les lignes existantes du noyau; uniquement des ajouts ici
+
