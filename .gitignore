@@ -42,6 +42,11 @@ figures/*.tiff
 _notes_personnelles/
 *_PERSONNEL.*
 
+# Agent reports (temporary, keep only curated meta-docs)
+DOCS/
+DATA_EXTENSION_SUMMARY_*.md
+arrest-molecules/
+
 # Excel temporaires
 ~$*.xlsx
 

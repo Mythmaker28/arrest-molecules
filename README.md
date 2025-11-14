@@ -10,14 +10,15 @@
 
 **Hypothèse exploratoire et framework pilote pour l'étude des composés à effets d'amortissement biologique**
 
-> 📢 **Version actuelle : v1.1.1** | [📥 Télécharger la dernière release](https://github.com/Mythmaker28/arrest-molecules/releases/latest) | [📖 Notes de version](https://github.com/Mythmaker28/arrest-molecules/releases/tag/v1.1.1)
+> 📢 **Version actuelle : v1.2.0-experimental** | [📥 Télécharger la dernière release](https://github.com/Mythmaker28/arrest-molecules/releases/latest) | [📖 Notes de version](https://github.com/Mythmaker28/arrest-molecules/releases/tag/v1.2.0-experimental)
 
 ---
 
 <!--VERSION-START-->
-**Version actuelle (latest):** v1.1.1 ⭐  
-**Date de release :** 23 October 2025  
+**Version actuelle (latest):** v1.2.0-experimental ⚗️  
+**Date de release :** 14 November 2025  
 **DOI Zenodo :** 10.5281/zenodo.17420685  
+**Note:** Experimental release with extended dataset (9 additional compounds with partial data)
 <!--VERSION-END-->
 
 **Author:** Tommy Lepesteur  
@@ -35,7 +36,8 @@
 
 - ✅ **Points forts:** Transparence des données, code reproductible, prédictions falsifiables, classement par confiance
 - ⚠️ **Limitations critiques:**
-  - Seulement 10 composés (échantillon pilote)
+  - **Core dataset:** 10 composés validés (échantillon pilote)
+  - **Extended dataset (v1.2-experimental):** 9 composés additionnels avec données partielles (NR/EST placeholders)
   - Aucune donnée expérimentale nouvelle générée
   - Métriques proposées (API, EMC, NCR, etc.) **ne sont pas encore validées empiriquement**
   - 59% des prédictions sont de confiance modérée ou faible
@@ -52,7 +54,8 @@ This data package accompanies the manuscript "Molecular Arrest in Biological Reg
 **⚠️ IMPORTANT: This is a pilot hypothesis-generating framework, not an established paradigm.** The work proposes testable concepts requiring prospective experimental validation.
 
 The package contains:
-- Curated molecular properties for **10 exemplar compounds**: 8 arrest agents (salvinorin A, paclitaxel, rapamycin, capsaicin, tetrodotoxin, resveratrol, ibogaine, noribogaine) + 2 oscillatory controls (psilocybin, LSD) for boundary comparison
+- **Core validated dataset:** 10 exemplar compounds with complete data: 8 arrest agents (salvinorin A, paclitaxel, rapamycin, capsaicin, tetrodotoxin, resveratrol, ibogaine, noribogaine) + 2 oscillatory controls (psilocybin, LSD)
+- **🆕 Extended experimental dataset (v1.2):** 9 additional compounds with partial data: nalfurafine, everolimus, temsirolimus, muscimol, diazepam, propofol, adenosine, curcumin, quercetin
 - **Proposed** pharmacological metrics (API, EMC, NCR, AKR, PARI) — *indices requiring empirical validation*
 - Uncertainty quantification via Monte Carlo simulation
 - Confidence grading for 44 quantitative predictions (41% high confidence, 30% moderate, 30% low)
@@ -62,7 +65,8 @@ The package contains:
 
 **⚠️ LIMITATIONS:**
 - **No new experimental data were generated.** All values are literature-derived (95+ sources).
-- **Small dataset:** Only 10 compounds; conclusions remain tentative.
+- **Core dataset:** 10 compounds (validated) — conclusions remain tentative
+- **Extended dataset (v1.2-experimental):** 9 compounds with partial/estimated data (71% completeness) — exploratory only
 - **Metrics are proposed, not validated:** API, EMC, NCR, AKR, PARI require prospective testing.
 - **Many predictions are low-to-moderate confidence:** See `Confidence_Grading_Matrix.csv` for details.
 
@@ -72,12 +76,22 @@ The package contains:
 
 ### Core Data Tables
 
-**1. Compound_Properties_Database.csv** (10 rows × 36 columns)
+**1. Compound_Properties_Database.csv** (10 rows × 36 columns) ✅ VALIDATED
 - Molecular properties: formula, MW, logP, rotatable bonds, SMILES, InChI
 - Binding parameters: K_i, K_d, EC₅₀, k_off
 - Pharmacokinetics: t₁/₂, C_max, AUC, V_d, clearance, protein binding
-- **New compounds:** Ibogaine, Noribogaine, Psilocybin, LSD (arrest-oscillation continuum)
+- **Compounds:** Salvinorin A, Paclitaxel, Rapamycin, Capsaicin, Tetrodotoxin, Resveratrol, Ibogaine, Noribogaine, Psilocybin, LSD
 - Literature sources: PubMed IDs for each parameter
+- **Status:** Stable, reproducible, passes all validation tests
+
+**1.1 Compound_Properties_Experimental_Extended.csv** (9 rows × 36 columns) ⚗️ EXPERIMENTAL (v1.2)
+- **Same structure as core dataset** but with partial/incomplete data
+- **Compounds:** Nalfurafine, Everolimus, Temsirolimus, Muscimol, Diazepam, Propofol, Adenosine, Curcumin, Quercetin
+- **Purpose:** Exploratory data collection, SAR validation, candidate evaluation for future promotion to core dataset
+- **Completeness:** ~71% (many NR/EST/NA placeholders)
+- **Confidence:** 33% HIGH+, 67% MODERATE-LOW
+- **Caution:** ⚠️ This file contains preliminary data. Do NOT use for definitive conclusions without additional validation.
+- See `Data_Package_FAIR2/CANDIDATE_MOLECULES_TODO.md` for data gaps and priorities
 
 **2. API_Calculations_Full.xlsx** (multi-sheet workbook)
 - Sheet 1: Input parameters with literature sources
