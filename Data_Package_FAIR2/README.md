@@ -110,6 +110,14 @@ The package contains:
 
 ## Quick Start Guide
 
+### For users wanting a status summary of the datasets:
+
+```bash
+python dataset_status.py
+```
+
+Prints, as read from the files: the row counts of the core and extended CSV datasets, rows whose number of fields differs from the header, the stored `Confidence_Grade` values, placeholder totals (`NR/NA/ND/EST`) and empty cells, and the tier distribution documented in `DATA_QUALITY_OVERVIEW.md` (tiers are not stored in the CSV files). The script only reads files.
+
 ### For users wanting to verify API calculations:
 
 1. Open `Compound_Properties_Database.csv`
