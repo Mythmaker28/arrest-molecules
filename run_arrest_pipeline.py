@@ -20,6 +20,7 @@ It does NOT modify or fabricate any scientific data.
 """
 
 from pathlib import Path
+from typing import Optional
 import subprocess
 import sys
 
@@ -49,7 +50,7 @@ def check_required_files() -> None:
         print("Please ensure all data files are present in Data_Package_FAIR2.")
         sys.exit(1)
 
-def find_analysis_script() -> Path | None:
+def find_analysis_script() -> Optional[Path]:
     for script in SCRIPT_CANDIDATES:
         if script.exists():
             return script
