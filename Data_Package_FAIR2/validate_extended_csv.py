@@ -12,12 +12,13 @@ import pandas as pd
 import sys
 
 
-def main():
+def main(extended_csv='Compound_Properties_Experimental_Extended.csv',
+         main_csv='Compound_Properties_Database.csv'):
     """Run validation checks on Extended CSV."""
-    
+
     # Load Extended CSV
     try:
-        df = pd.read_csv('Compound_Properties_Experimental_Extended.csv')
+        df = pd.read_csv(extended_csv)
         print(f'[OK] Extended CSV loaded: {len(df)} rows')
     except Exception as e:
         print(f'[ERROR] Failed to load Extended CSV: {e}')
@@ -44,7 +45,7 @@ def main():
 
     # Check header consistency with main database
     try:
-        df_main = pd.read_csv('Compound_Properties_Database.csv')
+        df_main = pd.read_csv(main_csv)
         if list(df.columns) != list(df_main.columns):
             print('[ERROR] Extended CSV headers do not match main database')
             print(f'  Extended: {list(df.columns)[:5]}...')
@@ -55,10 +56,11 @@ def main():
     except Exception as e:
         print(f'[WARNING] Could not compare headers: {e}')
 
-    print('\n[OK] Validation passed')
-    
     if invalid_found:
+        print('\n[ERROR] Validation failed: invalid placeholder case')
         sys.exit(1)
+
+    print('\n[OK] Validation passed')
 
 
 if __name__ == '__main__':
