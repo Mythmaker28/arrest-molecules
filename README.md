@@ -195,7 +195,7 @@ pip install -r requirements.txt
 python run_arrest_pipeline.py
 ```
 
-**Output:** Validates data files, creates `outputs/` directory, and runs analysis scripts if available.
+**Output:** Checks that the data files are present, then runs the dataset status report, the data validations, the API quick check, the unit tests and the Monte Carlo API calculation for all compounds, stopping at the first step that fails. `API_Comparison_All_Compounds.csv` and `.png` are written to `outputs/` (ignored by git).
 
 📖 **Detailed guide:** See [`QUICKSTART.md`](QUICKSTART.md) and [`DOCS/REPRO_STATUS.md`](DOCS/REPRO_STATUS.md)
 
