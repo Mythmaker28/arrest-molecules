@@ -16,7 +16,7 @@ Install: pip install numpy pandas matplotlib scipy
 Usage:
     python Python_Code_API_Monte_Carlo.py --compound Rapamycin
     python Python_Code_API_Monte_Carlo.py --all
-    python Python_Code_API_Monte_Carlo.py --new_compound --params K_d=0.1 tau=120 t_onset=1440 EC50=1
+    python Python_Code_API_Monte_Carlo.py --new_compound --K_d 0.1 --tau 120 --t_onset 1440 --EC50 1
 """
 
 import numpy as np
@@ -224,7 +224,7 @@ COMPOUND_DATABASE = {
 }
 
 
-def analyze_compound(compound_name, n_iterations=10000, plot=True):
+def analyze_compound(compound_name, n_iterations=10000, plot=True, random_seed=42):
     """
     Full analysis pipeline for a single compound.
     
@@ -236,6 +236,8 @@ def analyze_compound(compound_name, n_iterations=10000, plot=True):
         Monte Carlo iterations
     plot : bool
         Generate diagnostic plots
+    random_seed : int, default=42
+        Monte Carlo seed (42 reproduces the published results)
     
     Returns:
     --------
@@ -263,7 +265,7 @@ def analyze_compound(compound_name, n_iterations=10000, plot=True):
         t_onset_params=data['t_onset'],
         EC50_params=data['EC50'],
         n_iterations=n_iterations,
-        random_seed=42  # Use global default; will be made configurable via CLI
+        random_seed=random_seed
     )
     
     # Confidence grading
@@ -327,14 +329,15 @@ def plot_API_distribution(results):
     plt.close()
 
 
-def compare_all_compounds(plot_comparison=True):
+def compare_all_compounds(plot_comparison=True, n_iterations=10000, random_seed=42):
     """
     Calculate API for all compounds and generate comparison plot.
     """
     results_all = []
     
     for compound_name in COMPOUND_DATABASE.keys():
-        result = analyze_compound(compound_name, n_iterations=10000, plot=False)
+        result = analyze_compound(compound_name, n_iterations=n_iterations, plot=False,
+                                  random_seed=random_seed)
         results_all.append(result)
     
     # Create summary dataframe
@@ -421,7 +424,8 @@ def plot_API_comparison(df_summary):
     plt.close()
 
 
-def calculate_new_compound(K_d, tau, t_onset, EC50, compound_name="New Compound", n_iterations=10000):
+def calculate_new_compound(K_d, tau, t_onset, EC50, compound_name="New Compound", n_iterations=10000,
+                           random_seed=42):
     """
     Calculate API for a user-specified novel compound.
     
@@ -452,7 +456,8 @@ def calculate_new_compound(K_d, tau, t_onset, EC50, compound_name="New Compound"
     API_rel = calculate_API_relative(API_abs)
     
     mc_results = monte_carlo_API_uncertainty(
-        params_K_d, params_tau, params_onset, params_EC50, n_iterations
+        params_K_d, params_tau, params_onset, params_EC50, n_iterations,
+        random_seed=random_seed
     )
     
     print(f"\n{'='*60}")
@@ -524,16 +529,19 @@ Examples:
     
     # Execute based on arguments
     if args.all:
-        compare_all_compounds(plot_comparison=not args.no_plot)
+        compare_all_compounds(plot_comparison=not args.no_plot, n_iterations=args.iterations,
+                              random_seed=args.random_seed)
     
     elif args.new_compound:
         if not all([args.K_d, args.tau, args.t_onset, args.EC50]):
             parser.error("--new_compound requires --K_d, --tau, --t_onset, --EC50")
         calculate_new_compound(args.K_d, args.tau, args.t_onset, args.EC50, 
-                              compound_name=args.name, n_iterations=args.iterations)
+                              compound_name=args.name, n_iterations=args.iterations,
+                              random_seed=args.random_seed)
     
     elif args.compound:
-        analyze_compound(args.compound, n_iterations=args.iterations, plot=not args.no_plot)
+        analyze_compound(args.compound, n_iterations=args.iterations, plot=not args.no_plot,
+                         random_seed=args.random_seed)
     
     else:
         parser.print_help()
