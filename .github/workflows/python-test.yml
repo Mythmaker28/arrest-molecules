@@ -13,7 +13,7 @@ jobs:
     name: Check Critical Artifacts
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     
     - name: Verify critical files presence
       run: |
@@ -41,10 +41,10 @@ jobs:
     needs: check-artifacts
     
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     
     - name: Set up Python 3.11
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v6
       with:
         python-version: '3.11'
     

@@ -53,3 +53,10 @@ arrest-molecules/
 outputs/
 figures/*.png
 .venv/
+
+# Outputs of the CI steps and README commands
+# (Python_Code_API_Monte_Carlo.py writes them to the current directory;
+# pytest --cov writes .coverage)
+API_Comparison_All_Compounds.*
+API_Distribution_*.png
+.coverage

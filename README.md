@@ -141,7 +141,7 @@ The package contains:
 ### Code and Scripts
 
 **5. Python_Code_API_Monte_Carlo.py**
-- Fully commented Python 3.8+ script
+- Fully commented Python script (tested with Python 3.11 in CI)
 - Calculates API with uncertainty propagation
 - Requires: numpy, pandas, matplotlib
 - Runtime: <10 seconds on standard laptop

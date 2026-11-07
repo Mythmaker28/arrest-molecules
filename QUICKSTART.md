@@ -92,5 +92,5 @@ python -m pytest test_api_calculations.py -v
 ---
 
 **Temps total :** < 3 minutes sur poste standard  
-**Prérequis :** Python 3.8+, R 4.0+ (optionnel pour figures)
+**Prérequis :** Python 3.11 (version testée en CI), R 4.0+ (optionnel pour figures)
 
